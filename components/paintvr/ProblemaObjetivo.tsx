@@ -11,12 +11,11 @@ const ProblemaObjetivo: React.FC = () => {
       {/* Contenedor de las tarjetas */}
       <div className="flex flex-1 gap-8 overflow-hidden">
         {/* Tarjeta "Problema" */}
-        <div className="flex-1 rounded-lg p-6 relative overflow-hidden" style={{ backgroundColor: '#FFEB00' }}>
+        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-transform transition-colors duration-300 ease-in-out bg-yellow-300 hover:bg-yellow-400 hover:-translate-y-1">
           <div className="absolute inset-0 flex items-center justify-center">
-            {/* Ejemplo de figura decorativa */}
+            {/* Figura decorativa */}
             <div className="w-40 h-40 rounded-full bg-gradient-to-r from-pink-500 via-blue-500 to-green-500 opacity-50"></div>
           </div>
-
           <div className="relative z-10 flex flex-col h-full justify-end">
             <h3 className="text-2xl font-bold text-black mb-2">Problema</h3>
             <p className="text-black mb-4">
@@ -27,12 +26,11 @@ const ProblemaObjetivo: React.FC = () => {
         </div>
 
         {/* Tarjeta "Objetivo" */}
-        <div className="flex-1 rounded-lg p-6 relative overflow-hidden" style={{ backgroundColor: '#00FF99' }}>
+        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-transform transition-colors duration-300 ease-in-out bg-green-400 hover:bg-green-500 hover:-translate-y-1">
           <div className="absolute inset-0 flex items-center justify-center">
             {/* Otra figura decorativa */}
             <div className="w-40 h-40 bg-gradient-to-r from-yellow-500 via-pink-500 to-blue-500 opacity-50 transform rotate-45 rounded-lg"></div>
           </div>
-
           <div className="relative z-10 flex flex-col h-full justify-end">
             <h3 className="text-2xl font-bold text-black mb-2">Objetivo</h3>
             <p className="text-black mb-4">
@@ -42,13 +40,12 @@ const ProblemaObjetivo: React.FC = () => {
           </div>
         </div>
 
-        {/* Tarjeta opcional (puedes eliminarla si no la necesitas) */}
-        <div className="flex-1 rounded-lg p-6 relative overflow-hidden" style={{ backgroundColor: '#00C8FF' }}>
+        {/* Tarjeta Opcional */}
+        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-transform transition-colors duration-300 ease-in-out bg-blue-400 hover:bg-blue-500 hover:-translate-y-1">
           <div className="absolute inset-0 flex items-center justify-center">
             {/* Otra figura decorativa */}
             <div className="w-40 h-40 bg-gradient-to-r from-green-500 via-purple-500 to-red-500 opacity-50 rounded-full"></div>
           </div>
-
           <div className="relative z-10 flex flex-col h-full justify-end">
             <h3 className="text-2xl font-bold text-black mb-2">Opcional</h3>
             <p className="text-black mb-4">
