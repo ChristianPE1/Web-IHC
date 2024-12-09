@@ -64,7 +64,7 @@ const Cards = () => {
         alt="Primer Prototipo"
         rotate="10deg"
         top="10%"
-        left="75%"
+        left="45%"
         className="w-[350px]"
         description="En base a la retroalimentacion de los usarios, se realiza diferentes moficaciones y se pudo observar una mejora, de igual manera se continuo la evaluacion con los usuarios para poder observar que otras cosas se podrian mejora"
         buttonText=""
