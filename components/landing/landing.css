@@ -1,0 +1,7 @@
+#tip::before {
+   content: "Un videojuego móvil para reducir el estrés";
+}
+
+#tip:hover::before {
+   content: "Ver más";
+}

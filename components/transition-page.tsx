@@ -1,7 +1,7 @@
 "use client";
 
 import { transitionVariantPage } from '@/utils/motion-transition';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 
 interface TransitionPageProps {
    bgColor: string;
@@ -12,7 +12,7 @@ const TransitionPage = ({ bgColor }: TransitionPageProps) => {
       <AnimatePresence mode="wait">
          <div>
             <motion.div
-               className={`fixed top-0 bottom-0 right-full w-screen z-30 ${bgColor}`}
+               className={`fixed top-full left-0 right-0 h-screen z-30 ${bgColor}`}
                variants={transitionVariantPage}
                initial='initial'
                animate='animate'
