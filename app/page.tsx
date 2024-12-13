@@ -21,13 +21,22 @@ export default function Home() {
   return (
     <>
       <Navbar bgColor='bg-slate-600' gradientColor='from-slate-600 to-slate-300' />
-      <main className='h-full'>
-        <TransitionPage bgColor='bg-slate-950' />
-        <CoverParticles colorParticles='#fff' />
-        <HeroSection textColor='from-purple-700 via-purple-600 to-purple-500' />
-        <Team textColor='text-purple-600' />
-        <Projects />
-        {/*<div className="fixed left-0 top-0 -z-10 h-full w-full"><div className="relative h-full w-full bg-slate-950"><div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div><div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div></div></div>*/}
+      <main className='h-screen w-full relative overflow-auto snap-y snap-mandatory'>
+        <div className='snap-center'>
+          <TransitionPage bgColor='bg-slate-950' />
+        </div>
+        <div className='snap-center'>
+          <CoverParticles colorParticles='#fff' />
+        </div>
+        <div className='snap-center'>
+          <HeroSection gradientColor='from-purple-700 via-purple-600 to-purple-500' textColor='text-purple-600' />
+        </div>
+        <div className='snap-center'>
+          <Team textColor='text-purple-600' />
+        </div>
+        <div className='snap-center'>
+          <Projects />
+        </div>
         <Background circleColor={circleColor} />
       </main>
     </>

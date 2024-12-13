@@ -15,11 +15,11 @@ export default function Team({ textColor }: TeamProps) {
 
 
    return (
-      <section className="p-4 ">
+      <section className="p-4 mt-14">
          <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-3xl sm:leading-tight md:text-5xl md:leading-tight m-auto">
             Equipo
          </h1>
-         <div className="flex flex-col lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow mt-10 overflow-hidden">
+         <div className="flex flex-col lg:flex-row h-fit lg:h-[425px] w-full max-w-6xl mx-auto shadow mt-4 overflow-hidden">
             {items.map((item) => {
                return (
                   <Panel

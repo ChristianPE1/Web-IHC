@@ -2,15 +2,16 @@
 import { TypeAnimation } from 'react-type-animation';
 
 interface HeroProps {
+   gradientColor: string;
    textColor: string;
 }
 
-export default function HeroSection({ textColor }: HeroProps) {
+export default function HeroSection({ gradientColor, textColor }: HeroProps) {
    return (
       <section className='z-60 h-screen text-white w-full'>.
          <div className='flex w-full items-center justify-center h-full flex-col'>
             <h1 className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-5xl font-medium leading-tight text-transparent lg:text-8xl sm:leading-tight md:text-7xl md:leading-tight">
-               Grupo <span className={`text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r ${textColor}  inline-block text-transparent bg-clip-text mt-4 relative z-10`}>
+               Grupo <span className={`text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r ${gradientColor}  inline-block text-transparent bg-clip-text mt-4 relative z-10`}>
                   SCS
                </span>
             </h1>
@@ -28,7 +29,7 @@ export default function HeroSection({ textColor }: HeroProps) {
                   wrapper='span'
                   repeat={Infinity}
                   speed={50}
-                  className='font-bold text-purple-600'
+                  className={`font-bold ${textColor}`}
                />
             </p>
          </div>
