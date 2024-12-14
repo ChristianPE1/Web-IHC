@@ -2,11 +2,6 @@
 import CoverParticles from "@/components/cover-particles";
 import HeroSection from "@/components/paintvr/hero-section";
 import TransitionPage from "@/components/transition-page";
-import Background from "@/components/background";
-import Navbar from "@/components/navbar";
-import Info from "@/components/project-sections/Info";
-import ProblemaObjetivo from "@/components/project-sections/ProblemaObjetivo";
-import { useRef } from "react";
 
 export default function PaintVR() {
   return (

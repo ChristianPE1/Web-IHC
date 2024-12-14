@@ -10,7 +10,8 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 5 }}
       >
-        Relaxing Space
+        <span className="text-white">Relaxing</span>{" "}
+        <span className="text-green-500">Space</span>
       </motion.h1>
 
       <motion.div

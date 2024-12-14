@@ -2,12 +2,10 @@
 import CoverParticles from "@/components/cover-particles";
 import TransitionPage from "@/components/transition-page";
 import ProblemaObjetivo from "@/components/project-sections/ProblemaObjetivo";
-import HeroSection from "@/components/paintvr/hero-section";
+import HeroSection from "@/components/relaxing-space/hero-section";
 import Info from "@/components/project-sections/Info";
 import Navbar from "@/components/navbar";
 import Background from "@/components/background";
-import { title } from "process";
-import { desc } from "motion/react-client";
 import { useRef } from "react";
 import DragCards from "@/components/relaxing-space/drag-cards";
 
