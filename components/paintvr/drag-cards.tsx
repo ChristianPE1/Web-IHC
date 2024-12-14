@@ -166,51 +166,50 @@ const Card: React.FC<CardProps> = ({
       </motion.div>
       {/* Popup */}
       {isPopupOpen && (
-       <div
-       className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50"
-       onClick={handleOverlayClick}
-     >
-       <motion.div
-         initial={{ opacity: 0, scale: 0.8 }}
-         animate={{ opacity: 1, scale: 1 }}
-         exit={{ opacity: 0, scale: 0.8 }}
-         className="bg-white p-6 rounded-lg shadow-lg flex w-11/12 max-w-3xl relative"
-       >
-         {/* Botón de cerrar (X) en la esquina superior derecha */}
-         <button
-           className="absolute top-4 right-6 text-2xl text-gray-500 hover:text-gray-900 focus:outline-none"
-           onClick={() => setIsPopupOpen(false)}
-         >
-           &times;
-         </button>
-     
-         {/* Imagen a la izquierda */}
-         <div className="flex justify-center">
-           <img
-             src={src}
-             alt={alt}
-             className="w-auto max-h-[300px] rounded"
-           />
-         </div>
-     
-         {/* Descripción y botón a la derecha */}
-         <div className="w-1/2 pl-6">
-           <h2 className="text-xl font-bold mb-4 text-black">{alt}</h2>
-           <p className="text-gray-700 mb-6">{description}</p>
-           {buttonText.length > 0 && (
-            <a
-              href={buttonUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-black text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-800 transition"
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50"
+          onClick={handleOverlayClick}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="bg-white p-6 rounded-lg shadow-lg flex w-11/12 max-w-3xl relative"
+          >
+            {/* Botón de cerrar (X) en la esquina superior derecha */}
+            <button
+              className="absolute top-4 right-6 text-2xl text-gray-500 hover:text-gray-900 focus:outline-none"
+              onClick={() => setIsPopupOpen(false)}
             >
-              {buttonText}
-            </a>
-           )}
-         </div>
-       </motion.div>
-     </div>
-     
+              &times;
+            </button>
+
+            {/* Imagen a la izquierda */}
+            <div className="flex justify-center">
+              <img
+                src={src}
+                alt={alt}
+                className="w-auto max-h-[300px] rounded"
+              />
+            </div>
+
+            {/* Descripción y botón a la derecha */}
+            <div className="w-1/2 pl-6">
+              <h2 className="text-xl font-bold mb-4 text-black">{alt}</h2>
+              <p className="text-gray-700 mb-6">{description}</p>
+              {buttonText.length > 0 && (
+                <a
+                  href={buttonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-800 transition"
+                >
+                  {buttonText}
+                </a>
+              )}
+            </div>
+          </motion.div>
+        </div>
       )}
     </>
   );
