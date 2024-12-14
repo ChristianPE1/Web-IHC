@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const RevealLinks = () => {
   return (
-    <div className="flex-1 p-6 relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
+    <div className="flex-1 p-6  relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
       <div className="grid place-content-center gap-4 text-current">
         <FlipLink href="#">Problema</FlipLink>
         <FlipLink href="#">&</FlipLink>

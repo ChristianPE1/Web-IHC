@@ -2,6 +2,8 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
+import Link from 'next/link';
+
 
 import {
    motion,
@@ -89,7 +91,7 @@ const Card = ({ imageSrc, title, description, link, colors }: {
             >
                {title}
             </h3>
-            <a
+            <Link
                style={{
                   transform: "translateZ(40px)",
                }}
@@ -98,7 +100,7 @@ const Card = ({ imageSrc, title, description, link, colors }: {
                ${isHovered ? "bg-slate-400/80 hover:bg-slate-600/50 font-bold" : ""}`}
             >
                {isHovered ? "Ver más" : description}
-            </a>
+            </Link>
          </div>
       </motion.div>
    );
@@ -118,7 +120,7 @@ export default function Projects() {
          title: "Paint VR",
          description: "Una videojuego de pintura en realidad virtual",
          link: "/paintvr",
-         colors: "from-red-400 to-yellow-400",
+         colors: "from-blue-700 to-sky-400",
       },
       // Agrega más proyectos aquí
    ];

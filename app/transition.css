@@ -1,0 +1,5 @@
+.transition-color {
+.transition-color {
+  transition: color 2s ease-in-out, background-color 1s ease-in-out;
+}
+}

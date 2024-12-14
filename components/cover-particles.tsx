@@ -67,7 +67,7 @@ export default function CoverParticles(props: CoverParticlesProps) {
                   distance: 150,
                   enable: true,
                   opacity: 0.5,
-                  width: 3,
+                  width: 0.5,
                },
                move: {
                   direction: "none",

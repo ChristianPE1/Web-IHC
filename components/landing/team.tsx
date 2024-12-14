@@ -1,6 +1,6 @@
 "use client"
 //import { FiBarChart, FiBell, FiDollarSign, FiPlay } from "react-icons/fi";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, MotionValue } from "motion/react";
 import { useWindowSize } from "@/components/landing/useWindowsSize";
 import { useState } from "react";
 import Image from "next/image";
@@ -63,7 +63,7 @@ interface PanelProps {
    index: boolean;
    email?: string;
    github?: string;
-   textColor: string;
+   textColor: MotionValue<string>;
 }
 
 const Panel = ({ open, setOpen, id, Icon, title, names, lastNames, name, lName, index, imgSrc, description, github, email, textColor }: PanelProps) => {

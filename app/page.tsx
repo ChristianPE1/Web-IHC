@@ -1,47 +1,63 @@
+"use client"
+import { useRef } from 'react';
 import CoverParticles from '@/components/cover-particles';
 import HeroSection from '@/components/landing/hero-section';
 import Projects from '@/components/landing/projects';
 import Team from '@/components/landing/team';
-import Image from "next/image";
 import TransitionPage from '@/components/transition-page';
 import Navbar from '@/components/navbar';
 import Background from '@/components/background';
 
-export default function Home() {
+const colors = {
+  circleColors: ['rgba(126,34,206,.25)', 'rgba(5,150,105,.15)', 'rgba(192,38,211,.15)'],
+  textColors: ['text-purple-600', 'text-emerald-600', 'text-fuchsia-600'],
+  gradientColors: ['from-purple-700 via-purple-600 to-purple-500', 'from-emerald-700 via-emerald-600 to-emerald-500', 'from-fuchsia-700 via-fuchsia-600 to-fuchsia-500']
+};
 
+export default function Home() {
   const bgColor = "bg-slate-950";
 
+  // Referencias para las secciones
+  const homeRef = useRef<HTMLDivElement>(null);
+  const teamRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
 
-  //const circleColor = "rgba(255,0,182,.15)";
-  //const circleColor = "rgba(9,76,195,.15)";
-  //const circleColor = "rgba(192,38,211,.15)"; // bg-fuchsia-600
-  const circleColor = "rgba(126,34,206,.25)"; // bg-purple-600
-  //const circleColor = "rgba(5,150,105,.15)"; // bg-emerald-600
-
+  // Función para desplazarse a una sección
+  const scrollToSection = (section: string) => {
+    if (section === 'inicio') homeRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (section === 'team') teamRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (section === 'projects') projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
-      <Navbar bgColor='bg-slate-600' gradientColor='from-slate-600 to-slate-300' />
-      <main className='h-screen w-full relative overflow-auto snap-y snap-mandatory'>
-        <div className='snap-center'>
-          <TransitionPage bgColor='bg-slate-950' />
+      <Navbar
+        bgColor="bg-slate-600"
+        gradientColor="from-slate-400/20 to-slate-300/30"
+        onNavigate={scrollToSection}
+        sections={[
+          { name: "Inicio", id: "inicio" },
+          { name: "Equipo", id: "team" },
+          { name: "Proyectos", id: "projects" }
+        ]}
+      />
+      <TransitionPage bgColor="bg-slate-950" />
+      <main className="h-screen w-full relative overflow-auto snap-y snap-mandatory">
+
+        <div className="snap-center">
+          <CoverParticles colorParticles="#fff" />
         </div>
-        <div className='snap-center'>
-          <CoverParticles colorParticles='#fff' />
+        <div className="snap-center" ref={homeRef}>
+          <HeroSection gradientColor="from-purple-700 via-purple-600 to-purple-500" textColor="text-purple-600" />
         </div>
-        <div className='snap-center'>
-          <HeroSection gradientColor='from-purple-700 via-purple-600 to-purple-500' textColor='text-purple-600' />
+        <div ref={teamRef} className="snap-center">
+          <Team textColor="text-purple-600" />
         </div>
-        <div className='snap-center'>
-          <Team textColor='text-purple-600' />
-        </div>
-        <div className='snap-center'>
+        <div ref={projectsRef} className="snap-center">
           <Projects />
         </div>
-        <Background circleColor={circleColor} backgroundColor={bgColor} />
       </main>
+      <Background circleColor={colors.circleColors[0]} backgroundColor={bgColor} />
     </>
   );
 }
-
-
