@@ -5,16 +5,17 @@ import Team from '@/components/landing/team';
 import Image from "next/image";
 import TransitionPage from '@/components/transition-page';
 import Navbar from '@/components/navbar';
-import Background from '@/components/landing/background';
+import Background from '@/components/background';
 
 export default function Home() {
 
+  const bgColor = "bg-slate-950";
 
 
   //const circleColor = "rgba(255,0,182,.15)";
   //const circleColor = "rgba(9,76,195,.15)";
   //const circleColor = "rgba(192,38,211,.15)"; // bg-fuchsia-600
-  const circleColor = "rgba(126,34,206,.15)"; // bg-purple-600
+  const circleColor = "rgba(126,34,206,.25)"; // bg-purple-600
   //const circleColor = "rgba(5,150,105,.15)"; // bg-emerald-600
 
 
@@ -37,7 +38,7 @@ export default function Home() {
         <div className='snap-center'>
           <Projects />
         </div>
-        <Background circleColor={circleColor} />
+        <Background circleColor={circleColor} backgroundColor={bgColor} />
       </main>
     </>
   );

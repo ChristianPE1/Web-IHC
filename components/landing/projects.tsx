@@ -117,7 +117,7 @@ export default function Projects() {
          imageSrc: "/relaxing-space-logo.png",
          title: "Paint VR",
          description: "Una videojuego de pintura en realidad virtual",
-         link: "/project2",
+         link: "/paintvr",
          colors: "from-red-400 to-yellow-400",
       },
       // Agrega más proyectos aquí

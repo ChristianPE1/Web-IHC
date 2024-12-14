@@ -6,19 +6,24 @@ import { AnimatePresence, motion } from 'framer-motion';
 const RevealLinks = () => {
   return (
     <div className="flex-1 p-6 relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
-      <div className="grid place-content-center gap-4 text-black">
+      <div className="grid place-content-center gap-4 text-current">
         <FlipLink href="#">Problema</FlipLink>
         <FlipLink href="#">&</FlipLink>
         <FlipLink href="#">Objetivo</FlipLink>
-        
+
       </div>
     </div>
   );
 };
 
+interface FlipLinkProps {
+  children: string;
+  href: string;
+}
+
 const DURATION = 0.25;
 const STAGGER = 0.025;
-const FlipLink = ({ children, href }) => {
+const FlipLink = ({ children, href }: FlipLinkProps) => {
   return (
     <motion.a
       initial="initial"
@@ -83,7 +88,7 @@ const ProblemaObjetivo: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="w-full h-screen bg-white p-8 flex flex-col">
+    <section className="w-full h-screen text-white p-8 flex flex-col">
 
       {/* Contenedor de tarjetas (RevealLinks, Problema y Objetivo) */}
       <div className="flex flex-1 gap-8 overflow-hidden">
@@ -91,7 +96,7 @@ const ProblemaObjetivo: React.FC = () => {
         <RevealLinks />
 
         {/* Tarjeta "Problema" */}
-        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-transform transition-colors duration-300 ease-in-out bg-yellow-300 hover:bg-yellow-400 hover:-translate-y-1">
+        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-transform  duration-300 ease-in-out bg-yellow-300 hover:bg-yellow-400 hover:-translate-y-1">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-40 h-40 rounded-full bg-gradient-to-r from-pink-500 via-blue-500 to-green-500 opacity-50"></div>
           </div>
@@ -105,7 +110,7 @@ const ProblemaObjetivo: React.FC = () => {
         </div>
 
         {/* Tarjeta "Objetivo" */}
-        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-transform transition-colors duration-300 ease-in-out bg-green-400 hover:bg-green-500 hover:-translate-y-1">
+        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-colors duration-300 ease-in-out bg-green-400 hover:bg-green-500 hover:-translate-y-1">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-40 h-40 bg-gradient-to-r from-yellow-500 via-pink-500 to-blue-500 opacity-50 transform rotate-45 rounded-lg"></div>
           </div>
