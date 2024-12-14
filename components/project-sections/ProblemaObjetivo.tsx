@@ -5,12 +5,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const RevealLinks = () => {
   return (
-    <div className="flex-1 p-6  relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
+    <div className="flex-1 p-6 relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
       <div className="grid place-content-center gap-4 text-current">
         <FlipLink href="#">Problema</FlipLink>
         <FlipLink href="#">&</FlipLink>
         <FlipLink href="#">Objetivo</FlipLink>
-
       </div>
     </div>
   );
@@ -23,6 +22,7 @@ interface FlipLinkProps {
 
 const DURATION = 0.25;
 const STAGGER = 0.025;
+
 const FlipLink = ({ children, href }: FlipLinkProps) => {
   return (
     <motion.a
@@ -38,12 +38,8 @@ const FlipLink = ({ children, href }: FlipLinkProps) => {
         {children.split("").map((l, i) => (
           <motion.span
             variants={{
-              initial: {
-                y: 0,
-              },
-              hovered: {
-                y: "-100%",
-              },
+              initial: { y: 0 },
+              hovered: { y: "-100%" },
             }}
             transition={{
               duration: DURATION,
@@ -61,12 +57,8 @@ const FlipLink = ({ children, href }: FlipLinkProps) => {
         {children.split("").map((l, i) => (
           <motion.span
             variants={{
-              initial: {
-                y: "100%",
-              },
-              hovered: {
-                y: 0,
-              },
+              initial: { y: "100%" },
+              hovered: { y: 0 },
             }}
             transition={{
               duration: DURATION,
@@ -84,44 +76,65 @@ const FlipLink = ({ children, href }: FlipLinkProps) => {
   );
 };
 
+const Card = ({ title, description, color }: { title: string; description: string; color: string }) => {
+  const paintVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  return (
+    <div className={`flex-1 rounded-3xl p-8 relative overflow-hidden transform transition-all duration-300 ease-in-out ${color} hover:-translate-y-2 backdrop-blur-sm border border-white border-opacity-60 h-1/2 flex items-center justify-center`}>
+      {/* Floating squares behind */}
+      <div className="absolute top-1/4 left-4 w-16 h-16 bg-white bg-opacity-40 rounded-lg transform rotate-12 filter blur-sm"></div>
+      <div className="absolute bottom-1/4 right-4 w-20 h-20 bg-white bg-opacity-40 rounded-lg transform -rotate-6 filter blur-sm"></div>
+      <div className="absolute top-1/2 left-1/3 w-12 h-12 bg-white bg-opacity-40 rounded-lg transform rotate-45 filter blur-sm"></div>
+
+      <div className="relative z-10 flex flex-col items-center justify-center">
+        <motion.h3 
+          className="text-4xl font-bold text-white mb-4"
+          variants={paintVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {title}
+        </motion.h3>
+        <motion.p 
+          className="text-lg text-white mb-6"
+          variants={paintVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {description}
+        </motion.p>
+        <p className="text-sm text-gray-200">Ejemplo: Detalle de autores u otra info</p>
+      </div>
+
+      {/* Floating squares in front */}
+      <div className="absolute top-8 left-1/4 w-12 h-12 bg-white bg-opacity-60 rounded-lg transform -rotate-12 z-20"></div>
+      <div className="absolute bottom-8 right-1/3 w-16 h-16 bg-white bg-opacity-60 rounded-lg transform rotate-6 z-20"></div>
+    </div>
+  );
+};
+
 const ProblemaObjetivo: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="w-full h-screen text-white p-8 flex flex-col">
-
-      {/* Contenedor de tarjetas (RevealLinks, Problema y Objetivo) */}
-      <div className="flex flex-1 gap-8 overflow-hidden">
-        {/* Contenedor de RevealLinks */}
+    <section className="w-full h-screen text-white p-8">
+      <div className="w-full h-full flex gap-8 overflow-hidden items-center">
         <RevealLinks />
+        
+        <Card 
+          title="Problema"
+          description="Explicación breve del problema que se quiere abordar. Este texto sustituye la descripción original."
+          color="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
+        />
 
-        {/* Tarjeta "Problema" */}
-        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-transform  duration-300 ease-in-out bg-yellow-300 hover:bg-yellow-400 hover:-translate-y-1">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-40 h-40 rounded-full bg-gradient-to-r from-pink-500 via-blue-500 to-green-500 opacity-50"></div>
-          </div>
-          <div className="relative z-10 flex flex-col h-full justify-end">
-            <h3 className="text-2xl font-bold text-black mb-2">Problema</h3>
-            <p className="text-black mb-4">
-              Explicación breve del problema que se quiere abordar. Este texto sustituye la descripción original.
-            </p>
-            <p className="text-sm text-gray-700">Ejemplo: Detalle de autores u otra info</p>
-          </div>
-        </div>
-
-        {/* Tarjeta "Objetivo" */}
-        <div className="flex-1 rounded-lg p-6 relative overflow-hidden transform transition-colors duration-300 ease-in-out bg-green-400 hover:bg-green-500 hover:-translate-y-1">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-40 h-40 bg-gradient-to-r from-yellow-500 via-pink-500 to-blue-500 opacity-50 transform rotate-45 rounded-lg"></div>
-          </div>
-          <div className="relative z-10 flex flex-col h-full justify-end">
-            <h3 className="text-2xl font-bold text-black mb-2">Objetivo</h3>
-            <p className="text-black mb-4">
-              Aquí se describe el objetivo a alcanzar a partir del problema. Este texto reemplaza a la descripción original.
-            </p>
-            <p className="text-sm text-gray-700">Ejemplo: Detalle de autores u otra info</p>
-          </div>
-        </div>
+        <Card 
+          title="Objetivo"
+          description="Aquí se describe el objetivo a alcanzar a partir del problema. Este texto reemplaza a la descripción original."
+          color="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
+        />
       </div>
     </section>
   );
