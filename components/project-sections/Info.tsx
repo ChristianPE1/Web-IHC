@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Typewriter from 'typewriter-effect';
 
 interface InfoSectionProps {
   title: string;
@@ -29,7 +30,7 @@ export default function InfoSection({ title, description, logo, bgColor }: InfoS
       <div className="absolute bottom-1/3 right-1/4 w-28 h-28 bg-white bg-opacity-40 rounded-lg transform -rotate-12 filter blur"></div>
 
       {/* Contenedor de imagen e información */}
-      <div className={` h-5/6  max-w-[1100px] bg-gradient-to-br ${bgColor} p-8 rounded-3xl shadow-lg backdrop-filter backdrop-blur-sm border border-white border-opacity-60 z-10`}>
+      <div className={`h-5/6 max-w-[1100px] bg-gradient-to-br ${bgColor} p-8 rounded-3xl shadow-lg backdrop-filter backdrop-blur-sm border border-white border-opacity-60 z-10`}>
         <div className="flex flex-col md:flex-row gap-8 items-center">
           {/* Espacio para la imagen */}
           <div className="md:w-1/3 rounded-fullbg-white">
@@ -39,16 +40,29 @@ export default function InfoSection({ title, description, logo, bgColor }: InfoS
           {/* Contenedor de información */}
           <div className="w-full md:w-2/3">
             <div className="mb-6">
-              <motion.h2
+              <motion.div
                 className="text-5xl md:text-7xl font-bold mb-2"
                 variants={paintVariants}
                 initial="hidden"
                 animate="visible"
               >
-                {title}
-              </motion.h2>
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString(title)
+                      .pauseFor(2000)
+                      .deleteAll()
+                      .start();
+                  }}
+                  options={{
+                    loop: true,
+                    delay: 75,
+                    deleteSpeed: 50
+                  }}
+                />
+              </motion.div>
               <motion.p
-                className="text-xl md:text-2xl font-medium  mb-4"
+                className="text-xl md:text-2xl font-medium mb-4"
                 variants={vrVariants}
                 initial="hidden"
                 animate="visible"
@@ -71,5 +85,4 @@ export default function InfoSection({ title, description, logo, bgColor }: InfoS
       <div className="absolute top-1/3 right-8 w-16 h-16 bg-white bg-opacity-60 rounded-lg transform -rotate-45 z-20"></div>
     </section>
   );
-};
-
+}
