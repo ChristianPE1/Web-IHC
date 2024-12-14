@@ -7,6 +7,7 @@ import Team from '@/components/landing/team';
 import TransitionPage from '@/components/transition-page';
 import Navbar from '@/components/navbar';
 import Background from '@/components/background';
+import { Home, Users, FolderCode } from 'lucide-react';
 
 const colors = {
   circleColors: ['rgba(126,34,206,.25)', 'rgba(5,150,105,.15)', 'rgba(192,38,211,.15)'],
@@ -14,7 +15,7 @@ const colors = {
   gradientColors: ['from-purple-700 via-purple-600 to-purple-500', 'from-emerald-700 via-emerald-600 to-emerald-500', 'from-fuchsia-700 via-fuchsia-600 to-fuchsia-500']
 };
 
-export default function Home() {
+export default function LandingPage() {
   const bgColor = "bg-slate-950";
 
   // Referencias para las secciones
@@ -36,9 +37,9 @@ export default function Home() {
         gradientColor="from-slate-400/20 to-slate-300/30"
         onNavigate={scrollToSection}
         sections={[
-          { name: "Inicio", id: "inicio" },
-          { name: "Equipo", id: "team" },
-          { name: "Proyectos", id: "projects" }
+          { name: "Inicio", id: "inicio", icon: <Home size={24} /> },
+          { name: "Equipo", id: "team", icon: <Users size={24} /> },
+          { name: "Proyectos", id: "projects", icon: <FolderCode size={24} /> }
         ]}
       />
       <TransitionPage bgColor="bg-slate-950" />

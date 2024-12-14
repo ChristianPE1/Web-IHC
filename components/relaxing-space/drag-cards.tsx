@@ -6,9 +6,9 @@ import { twMerge } from "tailwind-merge";
 
 const DragCards = () => {
   return (
-    <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-neutral-950">
-      <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
-        ANEXOS<span className="text-green-500">.</span>
+    <section className="relative grid min-h-screen w-full place-content-center overflow-hidden ">
+      <h2 className="relative z-0 text-[20vw] font-black text-white/30 md:text-[200px]">
+        ANEXOS
       </h2>
       <Cards />
     </section>
@@ -183,7 +183,7 @@ const Card: React.FC<CardProps> = ({
           zIndex,
         }}
         className={twMerge(
-          "drag-elements absolute w-48 bg-neutral-200 p-1 pb-4",
+          "drag-elements absolute w-48 bg-neutral-200 p-1 pb-4 cursor-pointer",
           className
         )}
         drag
@@ -197,7 +197,7 @@ const Card: React.FC<CardProps> = ({
             className="w-full h-auto transition-transform duration-500 group-hover:brightness-75 pointer-events-none"
           />
 
-          <p className="text-center text-sm font-semibold text-gray-700 mt-2">
+          <p className="text-center text-lg font-semibold text-gray-700 mt-2">
             {alt}
           </p>
           <button

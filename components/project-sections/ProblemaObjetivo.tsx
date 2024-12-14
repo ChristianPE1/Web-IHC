@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const RevealLinks = () => {
   return (
     <div className="flex-1 p-6  relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
-      <div className="grid place-content-center gap-4 text-current">
+      <div className="flex flex-col gap-y-4 text-current">
         <FlipLink href="#">Problema</FlipLink>
         <FlipLink href="#">&</FlipLink>
         <FlipLink href="#">Objetivo</FlipLink>
@@ -29,7 +29,7 @@ const FlipLink = ({ children, href }: FlipLinkProps) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-8xl font-black uppercase"
+      className="relative block overflow-hidden whitespace-nowrap text-7xl 2xl:text-8xl font-black uppercase"
       style={{
         lineHeight: 0.75,
       }}

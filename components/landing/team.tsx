@@ -63,7 +63,7 @@ interface PanelProps {
    index: boolean;
    email?: string;
    github?: string;
-   textColor: MotionValue<string>;
+   textColor: string;
 }
 
 const Panel = ({ open, setOpen, id, Icon, title, names, lastNames, name, lName, index, imgSrc, description, github, email, textColor }: PanelProps) => {
@@ -131,7 +131,7 @@ const Panel = ({ open, setOpen, id, Icon, title, names, lastNames, name, lName, 
                         </div>
                      )}
                      <p className='text-base px-2 my-4'>{description}</p>
-                     <nav className='flex gap-x-2 items-center justify-center'>
+                     <nav className='flex gap-2 items-center justify-start flex-wrap'>
                         {github && (
                            <SocialPill href={github}>
                               <Image src="/icons/github.svg" alt="github" width={20} height={20} />
@@ -144,6 +144,12 @@ const Panel = ({ open, setOpen, id, Icon, title, names, lastNames, name, lName, 
                               <p>{email}</p>
                            </SocialPill>
                         )}
+                        {/*linkedin && (
+                           <SocialPill href={linkedin}>
+                              <Image src="/icons/linkedin.svg" alt="linkedin" width={20} height={20} />
+                              <p>Linkedin</p>
+                           </SocialPill>
+                        )*/}
                      </nav>
                   </motion.div>
                </motion.div>
@@ -226,7 +232,7 @@ const items = [
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
       index: false,
       email: "cpardave@unsa.edu.pe",
-      github: "https://github.com/ChristianPE1"
+      github: "https://github.com/ChristianPE1",
    },
    {
       id: 4,
