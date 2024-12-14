@@ -108,7 +108,7 @@ const Card: React.FC<CardProps> = ({
     let maxZIndex = -Infinity;
 
     els.forEach((el) => {
-      let zIndex = parseInt(
+      const zIndex = parseInt(
         window.getComputedStyle(el).getPropertyValue("z-index")
       );
 
@@ -150,6 +150,7 @@ const Card: React.FC<CardProps> = ({
             alt={alt}
             className="w-full h-auto transition-transform duration-500 group-hover:brightness-75 pointer-events-none"
           />
+
           <p className="text-center text-sm font-semibold text-gray-700 mt-2">
             {alt}
           </p>
