@@ -1,7 +1,8 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import Typewriter from 'typewriter-effect';
+import { TypeAnimation } from 'react-type-animation';
+//import Typewriter from 'typewriter-effect';
 
 interface InfoSectionProps {
   title: string;
@@ -40,27 +41,12 @@ export default function InfoSection({ title, description, logo, bgColor }: InfoS
           {/* Contenedor de información */}
           <div className="w-full md:w-2/3">
             <div className="mb-6">
-              <motion.div
+              <div
                 className="text-5xl md:text-7xl font-bold mb-2"
-                variants={paintVariants}
-                initial="hidden"
-                animate="visible"
+
               >
-                <Typewriter
-                  onInit={(typewriter) => {
-                    typewriter
-                      .typeString(title)
-                      .pauseFor(2000)
-                      .deleteAll()
-                      .start();
-                  }}
-                  options={{
-                    loop: true,
-                    delay: 75,
-                    deleteSpeed: 50
-                  }}
-                />
-              </motion.div>
+                {title}
+              </div>
               <motion.p
                 className="text-xl md:text-2xl font-medium mb-4"
                 variants={vrVariants}
