@@ -20,15 +20,19 @@ const Card = ({
   description,
   link,
   colors,
+  music,
 }: {
   imageSrc: string;
   title: string;
   description: string;
   link: string;
   colors: string;
+  music: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null); // Referencia al audio
+
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -60,26 +64,38 @@ const Card = ({
     x.set(0);
     y.set(0);
     setIsHovered(false);
+    if (audioRef.current) {
+      audioRef.current.pause(); // Pausar el audio cuando se sale del hover
+      audioRef.current.currentTime = 0; // Opcional: reiniciar el audio al inicio
+    }
   };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (audioRef.current) {
+      audioRef.current.play(); // Reproducir el audio cuando se hace hover
+    }
+  };
+
 
   return (
     <motion.div
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={handleMouseEnter}
       style={{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-white to-slate-300"
+      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-white to-slate-300 hover:shadow-2xl"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className={`absolute inset-2 grid place-content-center rounded-xl bg-gradient-to-br ${colors} shadow-lg duration-1000`}
+        className={`absolute inset-2 grid place-content-center rounded-xl bg-gradient-to-br ${colors} shadow-lg duration-1000 `}
       >
         <Image
           src={imageSrc}
@@ -111,6 +127,7 @@ const Card = ({
           {isHovered ? "Ver más" : description}
         </Link>
       </div>
+      <audio ref={audioRef} src={music} />
     </motion.div>
   );
 };
@@ -123,6 +140,7 @@ export default function Projects() {
       description: "Un videojuego móvil para reducir el estrés",
       link: "/relaxingspace",
       colors: "from-green-300 to-emerald-600",
+      music: "/music/relaxing-space.mp3",
     },
     {
       imageSrc: "/logos/relaxing-space-logo.png",
@@ -130,6 +148,7 @@ export default function Projects() {
       description: "Una videojuego de pintura en realidad virtual",
       link: "/paintvr",
       colors: "from-blue-700 to-sky-400",
+      music: "/music/paintvr.mp3",
     },
     // Agrega más proyectos aquí
   ];
@@ -148,6 +167,8 @@ export default function Projects() {
             description={project.description}
             link={project.link}
             colors={project.colors}
+            music={project.music}
+
           />
         ))}
       </div>

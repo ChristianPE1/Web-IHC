@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar";
 import Background from "@/components/background";
 import { useRef } from "react";
 import DragCards from "@/components/relaxing-space/drag-cards";
-import { Goal, Info, Component } from "lucide-react"
+import {Home, Goal, Info, Component } from "lucide-react"
 
 export default function RelaxingSpace() {
   const circleColor = "rgba(4,120,87,.15)"; // bg-emerald-700
@@ -51,7 +51,7 @@ export default function RelaxingSpace() {
         <div className="snap-center">
           <CoverParticles colorParticles="#fff" />
         </div>
-        <div className="snap-center" >
+        <div className="snap-center" id="home">
           <HeroSection />
         </div>
         <div className="snap-center" id="about" ref={infoRef}>
@@ -78,6 +78,7 @@ export default function RelaxingSpace() {
 }
 
 export const sectionsProject = [
+  { name: "Inicio", id: "home", icon: <Home size={24} /> },
   { name: "Acerca de", id: "about", icon: <Info size={24} /> },
   { name: "Objetivo", id: "goal", icon: <Goal size={24} /> },
   { name: "Anexos", id: "anexos", icon: <Component size={24} /> },

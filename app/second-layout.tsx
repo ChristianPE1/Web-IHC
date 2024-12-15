@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import { sectionsLandings } from './page';
 import { sectionsProject } from './(routes)/relaxingspace/page';
 
+
 interface SecondLayoutProps {
    children: React.ReactNode;
 }

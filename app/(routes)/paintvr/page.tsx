@@ -53,7 +53,7 @@ export default function RelaxingSpace() {
         <div className="snap-center">
           <CoverParticles colorParticles="#fff" />
         </div>
-        <div className="snap-center" >
+        <div className="snap-center" id="home">
           <HeroSection />
         </div>
         <div className="snap-center" ref={infoRef} id="about">

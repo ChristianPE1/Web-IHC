@@ -8,6 +8,7 @@ import TransitionPage from '@/components/transition-page';
 import Navbar from '@/components/navbar';
 import Background from '@/components/background';
 import { Home, Users, FolderCode } from 'lucide-react';
+import {WandSparkles} from 'lucide-react';
 
 const colors = {
   circleColors: ['rgba(126,34,206,.25)', 'rgba(5,150,105,.15)', 'rgba(192,38,211,.15)'],
@@ -44,16 +45,17 @@ export default function LandingPage() {
           <CoverParticles colorParticles="#fff" />
         </div>
         <div id="inicio" className="snap-center">
-          <HeroSection gradientColor="from-purple-700 via-purple-600 to-purple-500" textColor="text-purple-600" />
+          <HeroSection gradientColor={colors.gradientColors[0]} textColor={colors.textColors[0]} />
         </div>
         <div id="team" className="snap-center">
-          <Team textColor="text-purple-600" />
+          <Team textColor={colors.textColors[0]} />
         </div>
         <div id="projects" className="snap-center">
           <Projects />
         </div>
 
       </main>
+
       <Background circleColor={colors.circleColors[0]} backgroundColor={bgColor} />
     </>
   );
