@@ -73,7 +73,9 @@ const Card = ({
   const handleMouseEnter = () => {
     setIsHovered(true);
     if (audioRef.current) {
-      audioRef.current.play(); // Reproducir el audio cuando se hace hover
+      audioRef.current.play().catch(error => {
+        console.error('Error playing audio:', error);
+      });
     }
   };
 

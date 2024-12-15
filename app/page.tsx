@@ -1,5 +1,6 @@
 "use client"
 import { useRef } from 'react';
+import { useState } from 'react';
 import CoverParticles from '@/components/cover-particles';
 import HeroSection from '@/components/landing/hero-section';
 import Projects from '@/components/landing/projects';
@@ -9,6 +10,7 @@ import Navbar from '@/components/navbar';
 import Background from '@/components/background';
 import { Home, Users, FolderCode } from 'lucide-react';
 import {WandSparkles} from 'lucide-react';
+import SpeedDial from '@/components/landing/speed-dial';
 
 const colors = {
   circleColors: ['rgba(126,34,206,.25)', 'rgba(5,150,105,.15)', 'rgba(192,38,211,.15)'],
@@ -19,25 +21,14 @@ const colors = {
 export default function LandingPage() {
   const bgColor = "bg-slate-950";
 
-  // Referencias para las secciones
-  /*const homeRef = useRef<HTMLDivElement>(null);
-  const teamRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
+  const [gradientIndex, setGradientIndex] = useState(0);
 
-  // Función para desplazarse a una sección
-  const scrollToSection = (section: string) => {
-    if (section === 'inicio') homeRef.current?.scrollIntoView({ behavior: 'smooth' });
-    if (section === 'team') teamRef.current?.scrollIntoView({ behavior: 'smooth' });
-    if (section === 'projects') projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };*/
+  const handleGradientChange = (index: number) => {
+    setGradientIndex(index);
+  };
 
   return (
     <>
-      {/*<Navbar
-        bgColor="bg-slate-600"
-        gradientColor="from-slate-400/20 to-slate-300/30"
-        sections={sectionsLandings}
-      />*/}
       <TransitionPage bgColor="bg-slate-950" />
       <main className="h-screen w-full relative overflow-auto snap-y snap-mandatory">
 
@@ -45,18 +36,18 @@ export default function LandingPage() {
           <CoverParticles colorParticles="#fff" />
         </div>
         <div id="inicio" className="snap-center">
-          <HeroSection gradientColor={colors.gradientColors[0]} textColor={colors.textColors[0]} />
+          <HeroSection gradientColor={colors.gradientColors[gradientIndex]} textColor={colors.textColors[gradientIndex]} />
         </div>
         <div id="team" className="snap-center">
-          <Team textColor={colors.textColors[0]} />
+          <Team textColor={colors.textColors[gradientIndex]} />
         </div>
         <div id="projects" className="snap-center">
           <Projects />
         </div>
 
       </main>
-
-      <Background circleColor={colors.circleColors[0]} backgroundColor={bgColor} />
+      <SpeedDial onColorChange={handleGradientChange} />
+      <Background circleColor={colors.circleColors[gradientIndex]} backgroundColor={bgColor} />
     </>
   );
 }

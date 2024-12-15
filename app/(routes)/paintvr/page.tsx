@@ -8,8 +8,7 @@ import Navbar from "@/components/navbar";
 import Background from "@/components/background";
 import { useRef } from "react";
 import DragCards from "@/components/relaxing-space/drag-cards";
-import { Goal, Info, Component } from "lucide-react"
-import { sectionsProject } from '../relaxingspace/page';
+import { Home,Goal, Info, Component } from "lucide-react"
 
 
 export default function RelaxingSpace() {
@@ -53,10 +52,10 @@ export default function RelaxingSpace() {
         <div className="snap-center">
           <CoverParticles colorParticles="#fff" />
         </div>
-        <div className="snap-center" id="home">
+        <div className="snap-center" id="home2">
           <HeroSection />
         </div>
-        <div className="snap-center" ref={infoRef} id="about">
+        <div className="snap-center" ref={infoRef} id="about2">
           <InfoSection
             title={infoContent[0].title}
             description={infoContent[0].description}
@@ -64,10 +63,10 @@ export default function RelaxingSpace() {
             bgColor={infoContent[0].bgColor}
           />
         </div>
-        <div className="snap-center" ref={goalRef} id="goal">
+        <div className="snap-center" ref={goalRef} id="goal2">
           <ProblemaObjetivo />
         </div>
-        <div className='snap-center' ref={anexoRef} id='anexos'>
+        <div className='snap-center' ref={anexoRef} id='anexos2'>
 
           <DragCards />
         </div>
@@ -78,3 +77,10 @@ export default function RelaxingSpace() {
     </>
   );
 }
+
+export const sectionsPaintVR = [
+  { name: "Inicio", id: "home2", icon: <Home size={24} /> },
+  { name: "Acerca de", id: "about2", icon: <Info size={24} /> },
+  { name: "Objetivo", id: "goal2", icon: <Goal size={24} /> },
+  { name: "Anexos", id: "anexos2", icon: <Component size={24} /> },
+];

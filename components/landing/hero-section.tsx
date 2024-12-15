@@ -1,5 +1,6 @@
 "use client"
 import { TypeAnimation } from 'react-type-animation';
+import { useState } from 'react';
 
 interface HeroProps {
    gradientColor: string;
@@ -7,6 +8,8 @@ interface HeroProps {
 }
 
 export default function HeroSection({ gradientColor, textColor }: HeroProps) {
+
+
    return (
       <section className='z-60 h-screen text-white w-full'>.
          <div className='flex w-full items-center justify-center h-full flex-col'>
@@ -17,6 +20,7 @@ export default function HeroSection({ gradientColor, textColor }: HeroProps) {
             </h1>
             <p className="my-6 max-w-2xl text-center text-base leading-relaxed md:text-xl md:leading-relaxed">
                Grupo de desarrollo de software especializado en aplicaciones web y móviles. Nuestro equipo se caracteriza por su
+               <span className={`font-bold ${textColor}`}>
                <TypeAnimation
                   preRenderFirstString={true}
                   sequence={[
@@ -24,12 +28,13 @@ export default function HeroSection({ gradientColor, textColor }: HeroProps) {
                      10000,
                      ' calidad.',
                      10000,
-                     ' compromiso.']}
+                     ' compromiso.'
+                  ]}
                   wrapper='span'
                   repeat={Infinity}
                   speed={50}
-                  className={`font-bold ${textColor}`}
                />
+               </span>
             </p>
          </div>
 

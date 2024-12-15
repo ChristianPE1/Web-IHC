@@ -77,7 +77,7 @@ export default function RelaxingSpace() {
   );
 }
 
-export const sectionsProject = [
+export const sectionsRelaxingSpace = [
   { name: "Inicio", id: "home", icon: <Home size={24} /> },
   { name: "Acerca de", id: "about", icon: <Info size={24} /> },
   { name: "Objetivo", id: "goal", icon: <Goal size={24} /> },

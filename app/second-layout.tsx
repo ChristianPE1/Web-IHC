@@ -2,7 +2,8 @@
 import Navbar from '@/components/navbar';
 import { usePathname } from 'next/navigation';
 import { sectionsLandings } from './page';
-import { sectionsProject } from './(routes)/relaxingspace/page';
+import { sectionsRelaxingSpace } from './(routes)/relaxingspace/page';
+import { sectionsPaintVR } from './(routes)/paintvr/page';
 
 
 interface SecondLayoutProps {
@@ -14,7 +15,10 @@ export default function SecondLayout({ children }: SecondLayoutProps) {
 
    // Selecciona las secciones dinámicamente según la ruta
    const sections =
-      pathname === '/' ? sectionsLandings : sectionsProject;
+      pathname === '/' ? sectionsLandings :
+      pathname === '/paintvr' ? sectionsPaintVR :
+      pathname === '/relaxingspace' ? sectionsRelaxingSpace :
+      [];
 
    return (
       <div>
