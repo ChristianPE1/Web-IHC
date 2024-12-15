@@ -1,9 +1,6 @@
 "use client"
 import TransitionComponent from './transition-component';
 import Link from 'next/link';
-import Image from 'next/image';
-
-import { House } from "lucide-react"
 
 interface SectionProps {
    name: string;
@@ -14,11 +11,19 @@ interface SectionProps {
 interface NavbarProps {
    bgColor: string;
    gradientColor: string;
-   onNavigate: (section: string) => void;
+   //onNavigate: (section: string) => void;
    sections: SectionProps[]; // Prop para los nombres e IDs de las secciones
 }
 
-export default function Navbar({ bgColor, gradientColor, onNavigate, sections }: NavbarProps) {
+export default function Navbar({ bgColor, gradientColor, sections }: NavbarProps) {
+
+   const scrollToSection = (sectionId: string) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+         section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+   };
+
    return (
       <TransitionComponent position="top" className='fixed top-0 md:left-0 right-0 z-50 h-20 flex justify-between items-center px-4 mt-4 text-white/70 w-full'>
          <div className='flex items-center justify-between gap-10 w-full'>
@@ -27,7 +32,7 @@ export default function Navbar({ bgColor, gradientColor, onNavigate, sections }:
                {sections.map((section) => (
                   <button
                      key={section.id}
-                     onClick={() => onNavigate(section.id)}
+                     onClick={() => scrollToSection(section.id)}
                      className='flex flex-row gap-x-2 hover:underline underline-offset-8 py-2 px-4 rounded-full font-semibold hover:text-white '
                   >
                      {section.icon}

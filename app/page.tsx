@@ -19,7 +19,7 @@ export default function LandingPage() {
   const bgColor = "bg-slate-950";
 
   // Referencias para las secciones
-  const homeRef = useRef<HTMLDivElement>(null);
+  /*const homeRef = useRef<HTMLDivElement>(null);
   const teamRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
 
@@ -28,37 +28,39 @@ export default function LandingPage() {
     if (section === 'inicio') homeRef.current?.scrollIntoView({ behavior: 'smooth' });
     if (section === 'team') teamRef.current?.scrollIntoView({ behavior: 'smooth' });
     if (section === 'projects') projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  };*/
 
   return (
     <>
-      <Navbar
+      {/*<Navbar
         bgColor="bg-slate-600"
         gradientColor="from-slate-400/20 to-slate-300/30"
-        onNavigate={scrollToSection}
-        sections={[
-          { name: "Inicio", id: "inicio", icon: <Home size={24} /> },
-          { name: "Equipo", id: "team", icon: <Users size={24} /> },
-          { name: "Proyectos", id: "projects", icon: <FolderCode size={24} /> }
-        ]}
-      />
+        sections={sectionsLandings}
+      />*/}
       <TransitionPage bgColor="bg-slate-950" />
       <main className="h-screen w-full relative overflow-auto snap-y snap-mandatory">
 
         <div className="snap-center">
           <CoverParticles colorParticles="#fff" />
         </div>
-        <div className="snap-center" ref={homeRef}>
+        <div id="inicio" className="snap-center">
           <HeroSection gradientColor="from-purple-700 via-purple-600 to-purple-500" textColor="text-purple-600" />
         </div>
-        <div ref={teamRef} className="snap-center">
+        <div id="team" className="snap-center">
           <Team textColor="text-purple-600" />
         </div>
-        <div ref={projectsRef} className="snap-center">
+        <div id="projects" className="snap-center">
           <Projects />
         </div>
+
       </main>
       <Background circleColor={colors.circleColors[0]} backgroundColor={bgColor} />
     </>
   );
 }
+
+export const sectionsLandings = [
+  { name: "Inicio", id: "inicio", icon: <Home size={24} /> },
+  { name: "Equipo", id: "team", icon: <Users size={24} /> },
+  { name: "Proyectos", id: "projects", icon: <FolderCode size={24} /> }
+];

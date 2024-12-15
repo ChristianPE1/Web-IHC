@@ -42,16 +42,11 @@ export default function RelaxingSpace() {
   return (
     <>
       <TransitionPage bgColor="bg-slate-950" />
-      <Navbar
+      {/*<Navbar
         bgColor="bg-slate-600"
         gradientColor="from-slate-400/20 to-slate-300/30"
-        onNavigate={scrollToSection}
-        sections={[
-          { name: "Acerca de", id: "about", icon: <Info size={24} /> },
-          { name: "Objetivo", id: "goal", icon: <Goal size={24} /> },
-          { name: "Anexos", id: "anexos", icon: <Component size={24} /> },
-        ]}
-      />
+        sections={sectionsProject}
+      />*/}
       <main className="h-screen w-full relative overflow-auto snap-y snap-mandatory">
         <div className="snap-center">
           <CoverParticles colorParticles="#fff" />
@@ -59,7 +54,7 @@ export default function RelaxingSpace() {
         <div className="snap-center" >
           <HeroSection />
         </div>
-        <div className="snap-center" ref={infoRef} >
+        <div className="snap-center" id="about" ref={infoRef}>
           <InfoSection
             title={infoContent[0].title}
             description={infoContent[0].description}
@@ -67,10 +62,10 @@ export default function RelaxingSpace() {
             bgColor={infoContent[0].bgColor}
           />
         </div>
-        <div className="snap-center" ref={goalRef}>
+        <div className="snap-center" ref={goalRef} id="goal">
           <ProblemaObjetivo />
         </div>
-        <div className='snap-center' ref={anexoRef}>
+        <div className='snap-center' ref={anexoRef} id='anexos'>
 
           <DragCards />
         </div>
@@ -81,3 +76,9 @@ export default function RelaxingSpace() {
     </>
   );
 }
+
+export const sectionsProject = [
+  { name: "Acerca de", id: "about", icon: <Info size={24} /> },
+  { name: "Objetivo", id: "goal", icon: <Goal size={24} /> },
+  { name: "Anexos", id: "anexos", icon: <Component size={24} /> },
+];
