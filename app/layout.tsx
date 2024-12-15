@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import { subset } from 'semver';
+import SecondLayout from './second-layout';
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -20,8 +20,9 @@ export default function RootLayout({
       <body
         className={urbanist.className}
       >
-
+        <SecondLayout>
         {children}
+        </SecondLayout>
       </body>
     </html>
   );
