@@ -145,7 +145,7 @@ export default function Projects() {
       music: "/music/relaxing-space.mp3",
     },
     {
-      imageSrc: "/logos/relaxing-space-logo.png",
+      imageSrc: "/images/IconVR.png",
       title: "Paint VR",
       description: "Una videojuego de pintura en realidad virtual",
       link: "/paintvr",

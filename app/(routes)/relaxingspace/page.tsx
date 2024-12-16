@@ -18,7 +18,7 @@ export default function RelaxingSpace() {
     {
       title: "Relaxing Space",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis autem vero omnis incidunt. Aliquid, inventore non culpa voluptate magnam dolore deserunt, rem dolor commodi, assumenda quasi hic est magni excepturi.",
+        "Relax Space es un juego para estudiantes universitarios que buscan escapar del estrés académico. Cuida un huerto de plantas medicinales, como valeriana y hierbaluisa, realizando tareas simples para reducir la tensión y recargar energía mental. Perfecto para una pausa relajante.",
       logo: "/logos/relaxing-space-logo.png",
       bgColor: "from-green-600/50 via-green-400/30 to-green-800/30",
     },
@@ -63,7 +63,12 @@ export default function RelaxingSpace() {
           />
         </div>
         <div className="snap-center" ref={goalRef} id="goal">
-          <ProblemaObjetivo />
+        <ProblemaObjetivo
+          descripcionProblema="El estrés académico es un desafío significativo para los estudiantes universitarios de primeros años, quienes enfrentan presiones constantes para alcanzar un buen desempeño en un entorno competitivo. Esto puede afectar su bienestar emocional, concentración y motivación, y a menudo carecen de tiempo y recursos para implementar estrategias efectivas de manejo del estrés."
+          descripcionObjetivo="Este trabajo busca reducir el estrés académico en estudiantes universitarios de primeros años a través del desarrollo de Relaxing Space, un videojuego accesible que utiliza técnicas de relajación comprobadas, como música y ambientes naturales simulados. El juego ofrecerá una experiencia de exploración, estética calmante, interacciones simples y mensajes motivacionales para brindar un espacio virtual de relajación adaptado a la vida ocupada de los estudiantes."
+          colorProblema="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
+          colorObjetivo="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
+        />
         </div>
         <div className='snap-center' ref={anexoRef} id='anexos'>
 

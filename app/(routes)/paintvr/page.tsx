@@ -8,7 +8,8 @@ import Navbar from "@/components/navbar";
 import Background from "@/components/background";
 import { useRef } from "react";
 import DragCards from "@/components/paintvr/drag-cards";
-import { Home, Goal, Info, Component } from "lucide-react";
+import { Home,Goal, Info, Component } from "lucide-react"
+
 
 export default function RelaxingSpace() {
   const circleColor = "rgba(37,99,235,.15)"; // bg-emerald-700
@@ -19,9 +20,9 @@ export default function RelaxingSpace() {
       title: "PaintVR",
       description:
         "PaintVR es una aplicación de realidad virtual que permite a los usuarios pintar en un espacio 3D utilizando un controlador de realidad virtual. La aplicación es ideal para artistas y personas que buscan una forma creativa de relajarse.",
-      logo: "/images/paintvr-logo.png",
+      logo: "/images/IconVR.png",
       bgColor: "from-blue-600/50 via-blue-400/30 to-blue-800/30",
-    },
+    }
   ];
 
   // Referencias para las secciones
@@ -60,12 +61,20 @@ export default function RelaxingSpace() {
             description={infoContent[0].description}
             logo={infoContent[0].logo}
             bgColor={infoContent[0].bgColor}
+            showButton={false}
           />
         </div>
         <div className="snap-center" ref={goalRef} id="goal2">
-          <ProblemaObjetivo />
+        <ProblemaObjetivo
+          descripcionProblema="Las herramientas tradicionales de dibujo y pintura pueden limitar la creatividad y expresión artística al restringir a los usuarios a superficies bidimensionales. Además, muchas personas carecen de un espacio dedicado o el equipo necesario para crear obras de arte de gran escala. Estas limitaciones pueden obstaculizar la capacidad de los artistas para experimentar y explorar plenamente su potencial creativo."
+          descripcionObjetivo="El objetivo de PaintVR es proporcionar una plataforma inmersiva y accesible que permita a los usuarios crear y explorar el arte en un entorno tridimensional utilizando tecnología de realidad virtual. Al liberarse de las limitaciones de las herramientas tradicionales y del espacio físico, PaintVR busca fomentar la creatividad, la experimentación y la expresión artística. Además, la aplicación tiene como objetivo ofrecer una forma relajante y terapéutica de crear arte, brindando a los usuarios una vía de escape de las presiones y el estrés de la vida cotidiana."
+          colorProblema="bg-gradient-to-br from-blue-600/50 via-blue-400/30 to-blue-800/30"
+          colorObjetivo="bg-gradient-to-br from-blue-600/50 via-blue-400/30 to-blue-800/30"
+        />
+
         </div>
-        <div className="snap-center" ref={anexoRef} id="anexos2">
+        <div className='snap-center' ref={anexoRef} id='anexos2'>
+
           <DragCards />
         </div>
       </main>

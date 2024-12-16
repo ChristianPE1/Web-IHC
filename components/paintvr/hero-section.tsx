@@ -13,7 +13,7 @@ const HeroSection = () => {
       >
         <div>
           <Image
-            src=""
+            src="/images/IconVR.png"
             alt="PaintVR"
             width={250}
             height={250}
