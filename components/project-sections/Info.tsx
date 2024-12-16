@@ -16,10 +16,6 @@ export default function InfoSection({
   bgColor,
   showButton = true, // Valor por defecto para mostrar el botón
 }: InfoSectionProps) {
-  const paintVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
 
   const vrVariants = {
     hidden: { opacity: 0, y: 50 },

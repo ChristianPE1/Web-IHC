@@ -5,7 +5,6 @@ import ProblemaObjetivo from "@/components/project-sections/ProblemaObjetivo";
 import HeroSection from "@/components/paintvr/hero-section";
 import InfoSection from "@/components/project-sections/Info";
 import Background from "@/components/background";
-import { useRef } from "react";
 import DragCards from "@/components/paintvr/drag-cards";
 import { Home,Goal, Info, Component } from "lucide-react"
 
@@ -24,20 +23,6 @@ export default function RelaxingSpace() {
     }
   ];
 
-  // Referencias para las secciones
-  const infoRef = useRef<HTMLDivElement>(null);
-  const goalRef = useRef<HTMLDivElement>(null);
-  const anexoRef = useRef<HTMLDivElement>(null);
-
-  // Función para desplazarse a una sección
-  const scrollToSection = (section: string) => {
-    if (section === "about")
-      infoRef.current?.scrollIntoView({ behavior: "smooth" });
-    if (section === "goal")
-      goalRef.current?.scrollIntoView({ behavior: "smooth" });
-    if (section === "anexos")
-      anexoRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <>
@@ -54,7 +39,7 @@ export default function RelaxingSpace() {
         <div className="snap-center" id="home2">
           <HeroSection />
         </div>
-        <div className="snap-center" ref={infoRef} id="about2">
+        <div className="snap-center" id="about2">
           <InfoSection
             title={infoContent[0].title}
             description={infoContent[0].description}
@@ -63,7 +48,7 @@ export default function RelaxingSpace() {
             showButton={false}
           />
         </div>
-        <div className="snap-center" ref={goalRef} id="goal2">
+        <div className="snap-center" id="goal2">
         <ProblemaObjetivo
           descripcionProblema="Las herramientas tradicionales restringen la creatividad a superficies planas y, sin ambiente adecuado, ello limita la exploración del potencial artístico."
           descripcionObjetivo="PaintVR busca ofrecer una plataforma inmersiva de realidad virtual para crear arte en un entorno 3D, fomentando la creatividad y la expresión artística."
@@ -72,7 +57,7 @@ export default function RelaxingSpace() {
         />
 
         </div>
-        <div className='snap-center' ref={anexoRef} id='anexos2'>
+        <div className='snap-center'  id='anexos2'>
 
           <DragCards />
         </div>

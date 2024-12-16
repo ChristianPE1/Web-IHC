@@ -12,15 +12,15 @@ interface SectionProps {
 
 interface NavbarProps {
    bgColor: string;
-   gradientColor: string;
    sections: SectionProps[];
 }
 
-export default function Navbar({ bgColor, gradientColor, sections }: NavbarProps) {
+export default function Navbar({ bgColor, sections }: NavbarProps) {
    const [visitedSections, setVisitedSections] = useState<Record<string, boolean>>({});
    const [selectedColor, setSelectedColor] = useState(0);
    const [showRefreshText, setShowRefreshText] = useState(false);
    const [hasShownRefreshText, setHasShownRefreshText] = useState(false);
+   
 
    useEffect(() => {
       // Recuperar estado desde sessionStorage
@@ -36,6 +36,10 @@ export default function Navbar({ bgColor, gradientColor, sections }: NavbarProps
       }
       if (storedHasShownRefreshText === "true") {
          setHasShownRefreshText(true); // Evita mostrar el texto nuevamente si ya se mostró
+      }
+      // Usar selectedColor en una operación lógica o condicional
+      if (selectedColor) {
+         console.log(`Selected color is ${selectedColor}`);
       }
    }, []);
 

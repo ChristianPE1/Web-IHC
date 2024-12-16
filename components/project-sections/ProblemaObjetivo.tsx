@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 
 interface ProblemaObjetivoProps {

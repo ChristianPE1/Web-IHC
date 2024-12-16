@@ -24,7 +24,6 @@ export default function SecondLayout({ children }: SecondLayoutProps) {
       <div>
          <Navbar
             bgColor="bg-slate-600"
-            gradientColor="from-slate-400/20 to-slate-300/30"
             sections={sections}
          />
          {children}

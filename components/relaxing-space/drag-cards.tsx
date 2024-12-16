@@ -236,9 +236,11 @@ const Card: React.FC<CardProps> = ({
 
             {/* Imagen a la izquierda */}
             <div className="flex justify-center">
-              <img
+              <Image
                 src={src}
                 alt={alt}
+                width={300}
+                height={300}
                 className="w-full max-h-[250px] rounded"
               />
             </div>
