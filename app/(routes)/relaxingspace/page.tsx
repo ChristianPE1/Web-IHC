@@ -6,7 +6,6 @@ import HeroSection from "@/components/relaxing-space/hero-section";
 import InfoSection from "@/components/project-sections/Info";
 import Background from "@/components/background";
 import DragCards from "@/components/relaxing-space/drag-cards";
-import {Home, Goal, Info, Component } from "lucide-react"
 
 export default function RelaxingSpace() {
   const circleColor = "rgba(4,120,87,.15)"; // bg-emerald-700
@@ -66,9 +65,3 @@ export default function RelaxingSpace() {
   );
 }
 
-export const sectionsRelaxingSpace = [
-  { name: "Inicio", id: "home", icon: <Home size={24} /> },
-  { name: "Acerca de", id: "about", icon: <Info size={24} /> },
-  { name: "Objetivo", id: "goal", icon: <Goal size={24} /> },
-  { name: "Anexos", id: "anexos", icon: <Component size={24} /> },
-];

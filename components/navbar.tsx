@@ -1,26 +1,38 @@
 "use client";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation"; // Importa usePathname
 import TransitionComponent from "./transition-component";
 import Link from "next/link";
 import { RefreshCcw } from "lucide-react";
+import { Home, Goal, Info, Component, Users, FolderCode } from "lucide-react"
 
-interface SectionProps {
-   name: string;
-   id: string;
-   icon: React.ReactNode;
-}
 
-interface NavbarProps {
-   bgColor: string;
-   sections: SectionProps[];
-}
+export default function Navbar() {
+   const pathname = usePathname(); // Obtener la ruta actual
 
-export default function Navbar({ bgColor, sections }: NavbarProps) {
    const [visitedSections, setVisitedSections] = useState<Record<string, boolean>>({});
    const [selectedColor, setSelectedColor] = useState(0);
    const [showRefreshText, setShowRefreshText] = useState(false);
    const [hasShownRefreshText, setHasShownRefreshText] = useState(false);
    
+   // Definir las secciones directamente según la ruta actual
+   const sections = (() => {
+      if (pathname === "/") {
+         return [
+            { name: "Inicio", id: "home", icon: <Home /> },
+            { name: "Usuarios", id: "users", icon: <Users /> },
+            { name: "Código", id: "folderCode", icon: <FolderCode /> },
+         ];
+      } else if (pathname === "/paintvr" || pathname === "/relaxing-space") {
+         return [
+            { name: "Inicio", id: "home", icon: <Home /> },
+            { name: "Objetivo", id: "goal", icon: <Goal /> },
+            { name: "Información", id: "info", icon: <Info /> },
+            { name: "Componentes", id: "component", icon: <Component /> },
+         ];
+      }
+      return []; // Si no coincide ninguna ruta, devuelve un array vacío
+   })();
 
    useEffect(() => {
       // Recuperar estado desde sessionStorage
@@ -107,6 +119,7 @@ export default function Navbar({ bgColor, sections }: NavbarProps) {
       }
    };
 
+
    return (
       <TransitionComponent
          position="top"
@@ -126,7 +139,7 @@ export default function Navbar({ bgColor, sections }: NavbarProps) {
                </div>
             )}
             <nav
-               className={`flex items-center gap-3 px-8 py-3 rounded-full ease-in-out duration-500 hover:${bgColor}`}
+               className={`flex items-center gap-3 px-8 py-3 rounded-full ease-in-out duration-500`}
             >
                {sections.map((section) => (
                   <button

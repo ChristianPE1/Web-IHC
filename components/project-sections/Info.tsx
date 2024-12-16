@@ -1,5 +1,6 @@
 "use client";
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 interface InfoSectionProps {
   title: string;
@@ -35,7 +36,7 @@ export default function InfoSection({
         <div className="flex flex-col md:flex-row gap-8 items-center">
           {/* Espacio para la imagen */}
           <div className="md:w-1/3 rounded-fullbg-white">
-            <img src={logo} alt="Your Image" className="w-full h-full object-cover rounded-full" />
+            <Image src={logo} alt="Your Image" className="w-full h-full object-cover rounded-full" width={300} height={300} />
           </div>
 
           {/* Contenedor de información */}

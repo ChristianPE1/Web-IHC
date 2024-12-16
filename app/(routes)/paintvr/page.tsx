@@ -6,7 +6,6 @@ import HeroSection from "@/components/paintvr/hero-section";
 import InfoSection from "@/components/project-sections/Info";
 import Background from "@/components/background";
 import DragCards from "@/components/paintvr/drag-cards";
-import { Home,Goal, Info, Component } from "lucide-react"
 
 
 export default function RelaxingSpace() {
@@ -27,11 +26,7 @@ export default function RelaxingSpace() {
   return (
     <>
       <TransitionPage bgColor="bg-slate-950" />
-      {/*<Navbar
-        bgColor="bg-slate-600"
-        gradientColor="from-slate-400/20 to-slate-300/30"
-        sections={sectionsProject}
-      />*/}
+
       <main className="h-screen w-full relative overflow-auto snap-y snap-mandatory">
         <div className="snap-center">
           <CoverParticles colorParticles="#fff" />
@@ -68,10 +63,3 @@ export default function RelaxingSpace() {
     </>
   );
 }
-
-export const sectionsPaintVR = [
-  { name: "Inicio", id: "home2", icon: <Home size={24} /> },
-  { name: "Acerca de", id: "about2", icon: <Info size={24} /> },
-  { name: "Objetivo", id: "goal2", icon: <Goal size={24} /> },
-  { name: "Anexos", id: "anexos2", icon: <Component size={24} /> },
-];
