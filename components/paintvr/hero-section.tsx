@@ -1,5 +1,11 @@
 "use client";
 
+import React, { useRef, useState } from "react";
+import { motion } from "motion/react";
+import { twMerge } from "tailwind-merge";
+import Image from 'next/image';
+
+
 const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-center justify-center pt-20 text-black overflow-hidden">
