@@ -128,7 +128,7 @@ const ProblemaObjetivo: React.FC<ProblemaObjetivoProps> = ({
   colorProblema,
   colorObjetivo,
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+
 
   return (
     <section className="w-full h-screen text-white p-8">

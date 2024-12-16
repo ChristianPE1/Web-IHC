@@ -1,8 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { twMerge } from "tailwind-merge";
 import Image from 'next/image';
 
 

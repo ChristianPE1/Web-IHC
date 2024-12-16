@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
 
 const DragCards = () => {
   return (
     <section className="relative grid min-h-screen w-full place-content-center overflow-hidden ">
       <h2 className="relative z-0 text-[20vw] font-black text-white/30 md:text-[200px]">
-        ANEXOS<span className="text-indigo-500">.</span>
+        ANEXOS
       </h2>
       <Cards />
     </section>
@@ -187,9 +188,11 @@ const Card: React.FC<CardProps> = ({
 
             {/* Imagen a la izquierda */}
             <div className="flex justify-center">
-              <img
+              <Image
                 src={src}
                 alt={alt}
+                width={300}
+                height={300}
                 className="w-auto max-h-[300px] rounded"
               />
             </div>

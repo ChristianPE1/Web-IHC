@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
 
 const DragCards = () => {
   return (
@@ -191,9 +192,11 @@ const Card: React.FC<CardProps> = ({
         dragElastic={0.65}
       >
         <div className="relative group">
-          <img
+          <Image
             src={src}
             alt={alt}
+            width={300}
+            height={300}
             className="w-full h-auto transition-transform duration-500 group-hover:brightness-75 pointer-events-none"
           />
 

@@ -1,6 +1,5 @@
 "use client"
-//import { FiBarChart, FiBell, FiDollarSign, FiPlay } from "react-icons/fi";
-import { AnimatePresence, motion, MotionValue } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useWindowSize } from "@/components/landing/useWindowsSize";
 import { useState } from "react";
 import Image from "next/image";
@@ -144,12 +143,6 @@ const Panel = ({ open, setOpen, id, Icon, title, names, lastNames, name, lName, 
                               <p>{email}</p>
                            </SocialPill>
                         )}
-                        {/*linkedin && (
-                           <SocialPill href={linkedin}>
-                              <Image src="/icons/linkedin.svg" alt="linkedin" width={20} height={20} />
-                              <p>Linkedin</p>
-                           </SocialPill>
-                        )*/}
                      </nav>
                   </motion.div>
                </motion.div>
@@ -199,7 +192,7 @@ const items = [
       title: "Miembros del equipo",
       Icon: "team.svg",
       imgSrc:
-         "/trabajo-en-equipo.webp",
+         "/team-fondo.jpg",
       names: ["Saul", "Christian", "Sergio"],
       lastNames: ["Condori ", "Pardavé ", "Mena "],
       description:

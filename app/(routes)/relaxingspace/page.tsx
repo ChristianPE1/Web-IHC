@@ -4,7 +4,6 @@ import TransitionPage from "@/components/transition-page";
 import ProblemaObjetivo from "@/components/project-sections/ProblemaObjetivo";
 import HeroSection from "@/components/relaxing-space/hero-section";
 import InfoSection from "@/components/project-sections/Info";
-import Navbar from "@/components/navbar";
 import Background from "@/components/background";
 import { useRef } from "react";
 import DragCards from "@/components/relaxing-space/drag-cards";

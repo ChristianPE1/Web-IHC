@@ -1,15 +1,12 @@
 "use client"
-import { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import CoverParticles from '@/components/cover-particles';
 import HeroSection from '@/components/landing/hero-section';
 import Projects from '@/components/landing/projects';
 import Team from '@/components/landing/team';
 import TransitionPage from '@/components/transition-page';
-import Navbar from '@/components/navbar';
 import Background from '@/components/background';
 import { Home, Users, FolderCode } from 'lucide-react';
-import {WandSparkles} from 'lucide-react';
 import SpeedDial from '@/components/landing/speed-dial';
 
 const colors = {
