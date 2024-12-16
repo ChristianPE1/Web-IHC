@@ -205,7 +205,7 @@ const items = [
       description:
          "Somos un grupo de estudiantes de la carrera de Ciencia de la Computación de la Universidad Nacional de San Agustín. Nos especializamos en el desarrollo de videojuegos y aplicaciones web.",
       index: true,
-      email: "example@gmail.com"
+      email: "cpardave@unsa.edu.pe"
    },
    {
       id: 2,
@@ -214,7 +214,7 @@ const items = [
       lName: "Condori Machaca",
       Icon: "user.svg",
       imgSrc:
-         "/christian.jpg",
+         "/saul.jpg",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
       index: false,
@@ -241,7 +241,7 @@ const items = [
       lName: "Mena Quispe",
       Icon: "user.svg",
       imgSrc:
-         "/trabajo-en-equipo.webp",
+         "/sergio.jpg",
       description:
          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
       index: false,

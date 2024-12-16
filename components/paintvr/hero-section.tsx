@@ -36,7 +36,7 @@ const HeroSection = () => {
         animate={{ y: "0%", opacity: 1 }}
         transition={{ duration: 5 }}
         style={{
-          backgroundImage: "url(images/paintvr-fondo.png)",
+          backgroundImage: "url(/logos/paintvr-fondo.png)",
           backgroundSize: "cover",
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
