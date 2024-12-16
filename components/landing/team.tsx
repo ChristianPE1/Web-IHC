@@ -216,7 +216,7 @@ const items = [
       imgSrc:
          "/saul.jpg",
       description:
-         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+         "Estudiante de Ciencias de la Computación, apasionado por la tecnología y los videojuegos. Siempre en busca de nuevas soluciones innovadoras y emocionado por explorar el mundo digital.",
       index: false,
       email: "scondorim@unsa.edu.pe"
    },
@@ -229,7 +229,7 @@ const items = [
       imgSrc:
          "/christian.jpg",
       description:
-         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+         "Apasionado por los videojuegos y la programación. Me gusta aprender cosas nuevas y compartir mis conocimientos con los demás.",
       index: false,
       email: "cpardave@unsa.edu.pe",
       github: "https://github.com/ChristianPE1",
@@ -243,7 +243,7 @@ const items = [
       imgSrc:
          "/sergio.jpg",
       description:
-         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+         "Estudiante de Ciencia de la Computación. Tengo experiencia en desarrollo de software, especializándome en Python, React, y tecnologías web.",
       index: false,
       email: "smenaq@unsa.edu.pe"
    },
