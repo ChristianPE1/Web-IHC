@@ -7,8 +7,9 @@ import InfoSection from "@/components/project-sections/Info";
 import Navbar from "@/components/navbar";
 import Background from "@/components/background";
 import { useRef } from "react";
-import DragCards from "@/components/paintvr/drag-cards";
-import { Home, Goal, Info, Component } from "lucide-react";
+import DragCards from "@/components/relaxing-space/drag-cards";
+import { Home,Goal, Info, Component } from "lucide-react"
+
 
 export default function RelaxingSpace() {
   const circleColor = "rgba(37,99,235,.15)"; // bg-emerald-700
@@ -21,7 +22,7 @@ export default function RelaxingSpace() {
         "PaintVR es una aplicación de realidad virtual que permite a los usuarios pintar en un espacio 3D utilizando un controlador de realidad virtual. La aplicación es ideal para artistas y personas que buscan una forma creativa de relajarse.",
       logo: "/images/paintvr-logo.png",
       bgColor: "from-blue-600/50 via-blue-400/30 to-blue-800/30",
-    },
+    }
   ];
 
   // Referencias para las secciones
@@ -65,7 +66,8 @@ export default function RelaxingSpace() {
         <div className="snap-center" ref={goalRef} id="goal2">
           <ProblemaObjetivo />
         </div>
-        <div className="snap-center" ref={anexoRef} id="anexos2">
+        <div className='snap-center' ref={anexoRef} id='anexos2'>
+
           <DragCards />
         </div>
       </main>

@@ -126,7 +126,7 @@ const ProblemaObjetivo: React.FC = () => {
 
         <Card
           title="Problema"
-          description="Explicación breve del problema que se quiere abordar. Este texto sustituye la descripción original."
+          description="El estrés académico es un desafío significativo para los estudiantes universitarios de primeros años, quienes enfrentan presiones constantes para alcanzar un buen desempeño en un entorno competitivo. Esto puede afectar su bienestar emocional, concentración y motivación, y a menudo carecen de tiempo y recursos para implementar estrategias efectivas de manejo del estrés."
           color="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
         />
 

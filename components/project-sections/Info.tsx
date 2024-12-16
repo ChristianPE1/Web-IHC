@@ -58,7 +58,7 @@ export default function InfoSection({ title, description, logo, bgColor }: InfoS
             </div>
             <div className="flex gap-4">
               <button className="px-6 py-3 rounded-full text-white font-bold bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all duration-300">
-                Get started
+                Ir al documento
               </button>
             </div>
           </div>
