@@ -25,7 +25,7 @@ const HeroSection = () => {
           />
         </div>
         <div className="text-7xl 2xl:text-8xl font-bold [text-shadow:_0_8px_8px_rgb(0_0_0_/_0.8)]">
-          <span className="text-white">Pain</span>{" "}
+          <span className="text-white">Paint</span>
           <span className="text-blue-500">VR</span>
         </div>
       </motion.h1>

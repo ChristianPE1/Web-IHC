@@ -19,7 +19,7 @@ export default function RelaxingSpace() {
     {
       title: "PaintVR",
       description:
-        "PaintVR es una aplicación de realidad virtual que permite a los usuarios pintar en un espacio 3D utilizando un controlador de realidad virtual. La aplicación es ideal para artistas y personas que buscan una forma creativa de relajarse.",
+        "PaintVR es una aplicación de realidad virtual que permite a los usuarios pintar en un espacio 3D utilizando un visor de realidad virtual. La aplicación es ideal para artistas y personas que buscan una forma alternativa de pintar.",
       logo: "/images/IconVR.png",
       bgColor: "from-blue-600/50 via-blue-400/30 to-blue-800/30",
     }
@@ -66,8 +66,8 @@ export default function RelaxingSpace() {
         </div>
         <div className="snap-center" ref={goalRef} id="goal2">
         <ProblemaObjetivo
-          descripcionProblema="Las herramientas tradicionales restringen la creatividad a superficies planas y, sin espacio ni equipo adecuado, limitan la exploración del potencial artístico."
-          descripcionObjetivo="PaintVR busca ofrecer una plataforma inmersiva de realidad virtual para crear arte en 3D, fomentando la creatividad y la expresión artística, a la vez que proporciona una experiencia relajante y terapéutica."
+          descripcionProblema="Las herramientas tradicionales restringen la creatividad a superficies planas y, sin ambiente adecuado, ello limita la exploración del potencial artístico."
+          descripcionObjetivo="PaintVR busca ofrecer una plataforma inmersiva de realidad virtual para crear arte en un entorno 3D, fomentando la creatividad y la expresión artística."
           colorProblema="bg-gradient-to-br from-blue-600/50 via-blue-400/30 to-blue-800/30"
           colorObjetivo="bg-gradient-to-br from-blue-600/50 via-blue-400/30 to-blue-800/30"
         />

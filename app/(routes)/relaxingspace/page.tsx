@@ -18,7 +18,7 @@ export default function RelaxingSpace() {
     {
       title: "Relaxing Space",
       description:
-        "Relaxing Space es un videojuego diseñado para reducir el estrés académico en estudiantes de primeros años, ofreciendo un entorno virtual relajante con música, paisajes naturales y mensajes motivacionales.",
+        "Relaxing Space es un videojuego diseñado para reducir el estrés académico en estudiantes de primeros años de universidad, ofreciendo un entorno virtual relajante con música, paisajes naturales y mensajes motivacionales.",
       logo: "/logos/relaxing-space-logo.png",
       bgColor: "from-green-600/50 via-green-400/30 to-green-800/30",
     },
@@ -65,7 +65,7 @@ export default function RelaxingSpace() {
         <div className="snap-center" ref={goalRef} id="goal">
         <ProblemaObjetivo
           descripcionProblema="El estrés académico en estudiantes de primeros años afecta su bienestar emocional, concentración y motivación debido a presiones por el desempeño y la falta de recursos para gestionarlo."
-          descripcionObjetivo="El objetivo es reducir el estrés académico en estudiantes de primeros años mediante Relaxing Space, un videojuego que utiliza música, ambientes naturales y mensajes motivacionales para ofrecer un espacio virtual de relajación."
+          descripcionObjetivo="El objetivo es reducir el estrés académico en estudiantes de primeros años de universidad mediante Relaxing Space, un videojuego que utiliza música, ambientes naturales y mensajes motivacionales para ofrecer un espacio virtual de relajación."
           colorProblema="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
           colorObjetivo="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
         />
