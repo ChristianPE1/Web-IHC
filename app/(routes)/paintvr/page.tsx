@@ -61,10 +61,17 @@ export default function RelaxingSpace() {
             description={infoContent[0].description}
             logo={infoContent[0].logo}
             bgColor={infoContent[0].bgColor}
+            showButton={false}
           />
         </div>
         <div className="snap-center" ref={goalRef} id="goal2">
-          <ProblemaObjetivo />
+        <ProblemaObjetivo
+          descripcionProblema="El estrés académico es un desafío significativo..."
+          descripcionObjetivo="El objetivo es ayudar a los estudiantes a manejar el estrés..."
+          colorProblema="bg-gradient-to-br from-blue-600/50 via-blue-400/30 to-blue-800/30"
+          colorObjetivo="bg-gradient-to-br from-blue-600/50 via-blue-400/30 to-blue-800/30"
+        />
+
         </div>
         <div className='snap-center' ref={anexoRef} id='anexos2'>
 

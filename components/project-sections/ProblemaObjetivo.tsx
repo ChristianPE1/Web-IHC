@@ -3,9 +3,16 @@
 import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 
+interface ProblemaObjetivoProps {
+  descripcionProblema: string;
+  descripcionObjetivo: string;
+  colorProblema: string;
+  colorObjetivo: string;
+}
+
 const RevealLinks = () => {
   return (
-    <div className="flex-1 p-6  relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
+    <div className="flex-1 p-6 relative overflow-hidden transform transition-transform duration-300 ease-in-out flex items-center justify-center">
       <div className="flex flex-col gap-y-4 text-current">
         <FlipLink href="#">Problema</FlipLink>
         <FlipLink href="#">&</FlipLink>
@@ -106,7 +113,7 @@ const Card = ({ title, description, color }: { title: string; description: strin
         >
           {description}
         </motion.p>
-        <p className="text-sm text-gray-200">Ejemplo: Detalle de autores u otra info</p>
+        
       </div>
 
       {/* Floating squares in front */}
@@ -116,7 +123,12 @@ const Card = ({ title, description, color }: { title: string; description: strin
   );
 };
 
-const ProblemaObjetivo: React.FC = () => {
+const ProblemaObjetivo: React.FC<ProblemaObjetivoProps> = ({
+  descripcionProblema,
+  descripcionObjetivo,
+  colorProblema,
+  colorObjetivo,
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -126,14 +138,14 @@ const ProblemaObjetivo: React.FC = () => {
 
         <Card
           title="Problema"
-          description="El estrés académico es un desafío significativo para los estudiantes universitarios de primeros años, quienes enfrentan presiones constantes para alcanzar un buen desempeño en un entorno competitivo. Esto puede afectar su bienestar emocional, concentración y motivación, y a menudo carecen de tiempo y recursos para implementar estrategias efectivas de manejo del estrés."
-          color="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
+          description={descripcionProblema}
+          color={colorProblema}
         />
 
         <Card
           title="Objetivo"
-          description="Aquí se describe el objetivo a alcanzar a partir del problema. Este texto reemplaza a la descripción original."
-          color="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
+          description={descripcionObjetivo}
+          color={colorObjetivo}
         />
       </div>
     </section>

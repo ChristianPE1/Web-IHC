@@ -1,17 +1,22 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-//import Typewriter from 'typewriter-effect';
 
 interface InfoSectionProps {
   title: string;
   description: string;
   logo: string;
   bgColor: string;
+  showButton?: boolean; // Nueva propiedad para controlar la visibilidad del botón
 }
 
-export default function InfoSection({ title, description, logo, bgColor }: InfoSectionProps) {
+export default function InfoSection({
+  title,
+  description,
+  logo,
+  bgColor,
+  showButton = true, // Valor por defecto para mostrar el botón
+}: InfoSectionProps) {
   const paintVariants = {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -41,12 +46,7 @@ export default function InfoSection({ title, description, logo, bgColor }: InfoS
           {/* Contenedor de información */}
           <div className="w-full md:w-2/3">
             <div className="mb-6">
-              <div
-                className="text-5xl md:text-7xl font-bold mb-2"
-
-              >
-                {title}
-              </div>
+              <div className="text-5xl md:text-7xl font-bold mb-2">{title}</div>
               <motion.p
                 className="text-xl md:text-2xl font-medium mb-4"
                 variants={vrVariants}
@@ -56,11 +56,15 @@ export default function InfoSection({ title, description, logo, bgColor }: InfoS
                 {description}
               </motion.p>
             </div>
-            <div className="flex gap-4">
-              <button className="px-6 py-3 rounded-full text-white font-bold bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all duration-300">
-                Ir al documento
-              </button>
-            </div>
+
+            {/* Renderiza el botón solo si showButton es verdadero */}
+            {showButton && (
+              <div className="flex gap-4">
+                <button className="px-6 py-3 rounded-full text-white font-bold bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all duration-300">
+                  Ir al documento
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
