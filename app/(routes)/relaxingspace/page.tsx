@@ -18,7 +18,7 @@ export default function RelaxingSpace() {
     {
       title: "Relaxing Space",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis autem vero omnis incidunt. Aliquid, inventore non culpa voluptate magnam dolore deserunt, rem dolor commodi, assumenda quasi hic est magni excepturi.",
+        "Relax Space es un juego para estudiantes universitarios que buscan escapar del estrés académico. Cuida un huerto de plantas medicinales, como valeriana y hierbaluisa, realizando tareas simples para reducir la tensión y recargar energía mental. Perfecto para una pausa relajante.",
       logo: "/logos/relaxing-space-logo.png",
       bgColor: "from-green-600/50 via-green-400/30 to-green-800/30",
     },
