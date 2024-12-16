@@ -19,16 +19,23 @@ export default function Navbar() {
    const sections = (() => {
       if (pathname === "/") {
          return [
-            { name: "Inicio", id: "home", icon: <Home /> },
-            { name: "Usuarios", id: "users", icon: <Users /> },
-            { name: "Código", id: "folderCode", icon: <FolderCode /> },
+            { name: "Inicio", id: "inicio", icon: <Home /> },
+            { name: "Equipo", id: "team", icon: <Users /> },
+            { name: "Proyectos", id: "projects", icon: <FolderCode /> },
          ];
-      } else if (pathname === "/paintvr" || pathname === "/relaxing-space") {
+      } else if (pathname === "/relaxingspace") {
          return [
             { name: "Inicio", id: "home", icon: <Home /> },
+            { name: "Acerda de", id: "about", icon: <Info /> },
             { name: "Objetivo", id: "goal", icon: <Goal /> },
-            { name: "Información", id: "info", icon: <Info /> },
-            { name: "Componentes", id: "component", icon: <Component /> },
+            { name: "Anexos", id: "anexos", icon: <Component /> },
+         ];
+      } else if (pathname === "/paintvr") {
+         return [
+            { name: "Inicio", id: "home2", icon: <Home /> },
+            { name: "Acerda de", id: "about2", icon: <Info /> },
+            { name: "Objetivo", id: "goal2", icon: <Goal /> },
+            { name: "Anexos", id: "anexos2", icon: <Component /> },
          ];
       }
       return []; // Si no coincide ninguna ruta, devuelve un array vacío
