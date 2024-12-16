@@ -92,9 +92,9 @@ const Card = ({ title, description, color }: { title: string; description: strin
   return (
     <div className={`flex-1 rounded-3xl p-8 relative overflow-hidden transform transition-all duration-300 ease-in-out ${color} hover:-translate-y-2 backdrop-blur-sm border border-white border-opacity-60 h-1/2 flex items-center justify-center`}>
       {/* Floating squares behind */}
-      <div className="absolute top-1/4 left-4 w-16 h-16 bg-white bg-opacity-40 rounded-lg transform rotate-12 filter blur-sm"></div>
-      <div className="absolute bottom-1/4 right-4 w-20 h-20 bg-white bg-opacity-40 rounded-lg transform -rotate-6 filter blur-sm"></div>
-      <div className="absolute top-1/2 left-1/3 w-12 h-12 bg-white bg-opacity-40 rounded-lg transform rotate-45 filter blur-sm"></div>
+      <div className="absolute top-1/4 left-4 w-16 h-16 bg-gray-700 bg-opacity-60 rounded-lg transform rotate-12 filter blur-sm"></div>
+      <div className="absolute bottom-1/4 right-4 w-20 h-20 bg-gray-700 bg-opacity-60 rounded-lg transform -rotate-6 filter blur-sm"></div>
+      <div className="absolute top-1/2 left-1/3 w-12 h-12 bg-gray-700 bg-opacity-60 rounded-lg transform rotate-45 filter blur-sm"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center">
         <motion.h3
@@ -106,14 +106,13 @@ const Card = ({ title, description, color }: { title: string; description: strin
           {title}
         </motion.h3>
         <motion.p
-          className="text-lg text-white mb-6"
+          className="text-xl text-white mb-6"  // Cambié 'text-lg' a 'text-xl'
           variants={paintVariants}
           initial="hidden"
           animate="visible"
         >
           {description}
         </motion.p>
-        
       </div>
 
       {/* Floating squares in front */}

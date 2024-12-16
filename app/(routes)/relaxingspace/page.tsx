@@ -64,8 +64,8 @@ export default function RelaxingSpace() {
         </div>
         <div className="snap-center" ref={goalRef} id="goal">
         <ProblemaObjetivo
-          descripcionProblema="El estrés académico es un desafío significativo para los estudiantes universitarios de primeros años, quienes enfrentan presiones constantes para alcanzar un buen desempeño en un entorno competitivo. Esto puede afectar su bienestar emocional, concentración y motivación, y a menudo carecen de tiempo y recursos para implementar estrategias efectivas de manejo del estrés."
-          descripcionObjetivo="Este trabajo busca reducir el estrés académico en estudiantes universitarios de primeros años a través del desarrollo de Relaxing Space, un videojuego accesible que utiliza técnicas de relajación comprobadas, como música y ambientes naturales simulados. El juego ofrecerá una experiencia de exploración, estética calmante, interacciones simples y mensajes motivacionales para brindar un espacio virtual de relajación adaptado a la vida ocupada de los estudiantes."
+          descripcionProblema="El estrés académico en estudiantes de primeros años afecta su bienestar emocional, concentración y motivación debido a presiones por el desempeño y la falta de recursos para gestionarlo."
+          descripcionObjetivo="El objetivo es reducir el estrés académico en estudiantes de primer año mediante Relaxing Space, un videojuego que utiliza música, ambientes naturales y mensajes motivacionales para ofrecer un espacio virtual de relajación."
           colorProblema="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
           colorObjetivo="bg-gradient-to-br from-green-600/50 via-green-400/30 to-green-800/30"
         />
