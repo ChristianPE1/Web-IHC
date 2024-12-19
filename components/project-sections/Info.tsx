@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
+import Image from 'next/image';
 
 interface InfoSectionProps {
   title: string;
@@ -17,10 +17,6 @@ export default function InfoSection({
   bgColor,
   showButton = true, // Valor por defecto para mostrar el botón
 }: InfoSectionProps) {
-  const paintVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
 
   const vrVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -40,7 +36,7 @@ export default function InfoSection({
         <div className="flex flex-col md:flex-row gap-8 items-center">
           {/* Espacio para la imagen */}
           <div className="md:w-1/3 rounded-fullbg-white">
-            <img src={logo} alt="Your Image" className="w-full h-full object-cover rounded-full" />
+            <Image src={logo} alt="Your Image" className="w-full h-full object-cover rounded-full" width={300} height={300} />
           </div>
 
           {/* Contenedor de información */}

@@ -1,6 +1,5 @@
 "use client"
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from 'react';
 
 interface HeroProps {
    gradientColor: string;

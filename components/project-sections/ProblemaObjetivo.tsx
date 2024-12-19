@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 
 interface ProblemaObjetivoProps {
@@ -128,7 +127,7 @@ const ProblemaObjetivo: React.FC<ProblemaObjetivoProps> = ({
   colorProblema,
   colorObjetivo,
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+
 
   return (
     <section className="w-full h-screen text-white p-8">
