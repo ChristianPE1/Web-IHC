@@ -126,11 +126,11 @@ const Cards = () => {
         buttons={[
           {
             text: "Ver Videos",
-            url: "https://docs.google.com/forms/d/e/1FAIpQLSfUYCwfsPFgy3CSHenS58ErGIk8FuFPtLYuvO73Q67vdaZq4g/viewform",
+            url: "https://www.youtube.com/playlist?list=PLCFYbu8kDdyibM78eT18LFCShryiT4gEa",
           },
           {
             text: "Ver Perfiles",
-            url: "https://docs.google.com/forms/d/e/1FAIpQLSfUYCwfsPFgy3CSHenS58ErGIk8FuFPtLYuvO73Q67vdaZq4g/viewform",
+            url: "https://drive.google.com/file/d/1E8AsEXcmM2Cdx_DB0AIwlbmiusuPKwkc/view",
           },
         ]}
       />

@@ -42,12 +42,13 @@ export default function LandingPage() {
         <div id="inicio" className="snap-center">
           <HeroSection gradientColor={colors.gradientColors[gradientIndex]} textColor={colors.textColors[gradientIndex]} />
         </div>
-        <div id="team" className="snap-center">
-          <Team textColor={colors.textColors[gradientIndex]} />
-        </div>
         <div id="projects" className="snap-center">
           <Projects />
         </div>
+        <div id="team" className="snap-center">
+          <Team textColor={colors.textColors[gradientIndex]} />
+        </div>
+        
 
       </main>
       <SpeedDial onColorChange={handleGradientChange} />
