@@ -99,8 +99,8 @@ const Cards = () => {
         src="/images/encuesta.png"
         alt="ENCUESTA"
         rotate="-3deg"
-        top="30%"
-        left="35%"
+        top="10%"
+        left="20%"
         className="w-[350px]"
         description="Se realizo una encuesta para validar la necesidad de este proyecto, decidimos que el proyecto se centrará en ayudar a estudiantes al manejo del estrés académico."
         buttons={[
@@ -111,6 +111,26 @@ const Cards = () => {
           {
             text: "Ver resultados",
             url: "https://docs.google.com/spreadsheets/d/1HdK6PZsAzGnUPeJvaLzxFcH_7UaE6RgCjptwSFXUoHY/edit?gid=878736401#gid=878736401",
+          },
+        ]}
+      />
+      <Card
+        containerRef={containerRef}
+        src="/images/personas.png"
+        alt="PERSONAS"
+        rotate="15deg"
+        top="50%"
+        left="40%"
+        className="w-[350px]"
+        description="Para la validación con personas hemos seleccionado a 4 tipos de personas y hemos recopilado su feedback para mejorar y también revisar si nuestro proyecto cumple con el objetivo."
+        buttons={[
+          {
+            text: "Ver Videos",
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSfUYCwfsPFgy3CSHenS58ErGIk8FuFPtLYuvO73Q67vdaZq4g/viewform",
+          },
+          {
+            text: "Ver Perfiles",
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSfUYCwfsPFgy3CSHenS58ErGIk8FuFPtLYuvO73Q67vdaZq4g/viewform",
           },
         ]}
       />
