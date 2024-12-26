@@ -56,7 +56,7 @@ export default function InfoSection({
             {/* Renderiza el botón solo si showButton es verdadero */}
             {showButton && (
               <div className="flex gap-4">
-                <a href="https://drive.google.com/file/d/1TXkStobmqL-SZYle9AiwTpCzCHTwSMkM/view" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1dM9CXvf6wNCRLNzMVw2Ntop1925Phb8y/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <button className="px-6 py-3 rounded-full text-white font-bold bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all duration-300">
                     Ir al documento
                   </button>

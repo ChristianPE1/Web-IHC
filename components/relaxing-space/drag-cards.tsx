@@ -134,6 +134,22 @@ const Cards = () => {
           },
         ]}
       />
+      <Card
+        containerRef={containerRef}
+        src="/images/entrevista_final.png"
+        alt="VIDEOS FINALES"
+        rotate="-15deg"
+        top="15%"
+        left="45%"
+        className="w-[350px]"
+        description="Realizamos una validación con un usuario final, para ver si nuestro proyecto cumple con el objetivo y si es de ayuda para el usuario."
+        buttons={[
+          {
+            text: "Ver Video con Usuario",
+            url: "https://youtu.be/bNB4e7DfPVo",
+          },
+        ]}
+      />
     </div>
   );
 };
