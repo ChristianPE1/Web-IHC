@@ -145,8 +145,8 @@ const Cards = () => {
         description="Realizamos una validación con un usuario final, para ver si nuestro proyecto cumple con el objetivo y si es de ayuda para el usuario."
         buttons={[
           {
-            text: "Ver Video con Usuario",
-            url: "https://youtu.be/bNB4e7DfPVo",
+            text: "Ver Videos con Usuarios",
+            url: "https://www.youtube.com/playlist?list=PLCFYbu8kDdyg4bcz7otKckaQtwXpA_X9_",
           },
         ]}
       />
