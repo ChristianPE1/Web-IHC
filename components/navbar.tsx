@@ -32,8 +32,9 @@ export default function Navbar() {
     if (pathname === "/") {
       return [
         { name: "Inicio", id: "inicio", icon: <Home /> },
-        { name: "Equipo", id: "team", icon: <Users /> },
         { name: "Proyectos", id: "projects", icon: <FolderCode /> },
+        { name: "Equipo", id: "team", icon: <Users /> },
+        
       ];
     } else if (pathname === "/relaxingspace") {
       return [

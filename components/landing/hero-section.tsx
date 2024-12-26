@@ -5,16 +5,19 @@ import { ArrowDown } from 'lucide-react';
 interface HeroProps {
    gradientColor: string;
    textColor: string;
+   gradientColorTransparent: string;
 }
 
-export default function HeroSection({ gradientColor, textColor }: HeroProps) {
+export default function HeroSection({ gradientColor, textColor,gradientColorTransparent }: HeroProps) {
 
-   const navigateToProjects = () => {
-      const projectsSection = document.getElementById('projects');
+   const navigateToProjects = (sectionId:string) => {
+      const projectsSection = document.getElementById(sectionId);
       if (projectsSection) {
          projectsSection.scrollIntoView({ behavior: 'smooth' });
       }
    };
+
+
 
    return (
       <section className="z-30 h-screen text-white w-full">
@@ -42,13 +45,32 @@ export default function HeroSection({ gradientColor, textColor }: HeroProps) {
                   />
                </span>
             </p>
-            <a
-               onClick={navigateToProjects}
-               className={`z-50 cursor-pointer flex flex-row justify-center items-center gap-x-2  animate-bounce t-4 px-6 py-3 ${textColor} font-bold rounded-full hover:underline underline-offset-8`}
-            >
-               <ArrowDown size={24} className="inline-block" />
-               Revisar nuestros proyectos
-            </a>
+
+            <footer className="flex flex-row gap-x-20 absolute bottom-0 mb-10 text-center text-2xl text-gray-400">
+               <div onClick={()=>navigateToProjects('projects')}
+                  className={`z-20 cursor-pointer flex justify-center items-center gap-x-3 px-12 py-10 w-fit ${gradientColorTransparent} bg-gradient-to-br text-white rounded-full border-white border-2 relative group overflow-hidden`}
+                  
+               >
+                  Proyectos
+                  <ArrowDown size={24} />
+                  <div
+                     className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                     style={{ backgroundImage: "url('/hero-imgs/bg_project.png')" }}
+                  ></div>
+               </div>
+               <div onClick={() => navigateToProjects('team')}
+                  className={`z-20 cursor-pointer flex justify-center items-center gap-x-3 px-12 py-10 w-fit ${gradientColorTransparent} bg-gradient-to-br text-white rounded-full border-white border-2 relative group overflow-hidden`}
+
+               >
+                  Equipo
+                  <ArrowDown size={24} />
+                  <div
+                     className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                     style={{ backgroundImage: "url('/hero-imgs/bg_team.png')" }}
+                  ></div>
+               </div>
+
+            </footer>
 
          </div>
       </section>
