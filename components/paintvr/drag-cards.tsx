@@ -71,6 +71,18 @@ const Cards = () => {
         buttonText=""
         buttonUrl=""
       />
+      <Card
+        containerRef={containerRef}
+        src="/images/principios.png"
+        alt="Principios de diseño"
+        rotate="10deg"
+        top="40%"
+        left="35%"
+        className="w-[350px]"
+        description="Principios de diseño que se tomaron en cuenta para la creacion del videojuego"
+        buttonText="Ver PPt"
+        buttonUrl="https://docs.google.com/presentation/d/1kCit5jcU3z4UDGOhwXcLGRNa0qmW8q1qGdqDEk3qpdU/edit?usp=sharing"
+      />
     </div>
   );
 };
