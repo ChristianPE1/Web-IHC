@@ -38,7 +38,7 @@ export default function RelaxingSpace() {
   const [showMedal, setShowMedal] = useState(false);
 
   useEffect(() => {
-    let timer;
+    let timer: NodeJS.Timeout;
     if (showAchievement) {
       timer = setTimeout(() => {
         setShowAchievement(false);
