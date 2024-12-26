@@ -25,11 +25,7 @@ export default function RelaxingSpace() {
   return (
     <>
       <TransitionPage bgColor="bg-slate-950" />
-      {/*<Navbar
-        bgColor="bg-slate-600"
-        gradientColor="from-slate-400/20 to-slate-300/30"
-        sections={sectionsProject}
-      />*/}
+
       <main className="h-screen w-full relative overflow-auto snap-y snap-mandatory">
         <div className="snap-center">
           <CoverParticles colorParticles="#fff" />
@@ -59,8 +55,7 @@ export default function RelaxingSpace() {
         </div>
       </main>
       <Background circleColor={circleColor} backgroundColor={bgColor} />
-      {/*<div className="fixed left-0 top-0 -z-10 h-full w-full"><div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#6DEE9A_100%)]"></div></div>
-         <div className="fixed left-0 top-0 -z-10 h-full w-full"><div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#a7f3d0_100%)]"></div></div>*/}
+      
     </>
   );
 }

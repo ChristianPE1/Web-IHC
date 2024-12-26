@@ -11,7 +11,8 @@ import SpeedDial from '@/components/landing/speed-dial';
 const colors = {
   circleColors: ['rgba(126,34,206,.25)', 'rgba(194,65,12,.15)', 'rgba(37,99,235,.15)'],
   textColors: ['text-purple-600', 'text-orange-600', 'text-blue-600'],
-  gradientColors: ['from-purple-700 via-purple-600 to-purple-500', 'from-orange-700 via-orange-600 to-orange-500', 'from-blue-700 via-blue-600 to-blue-500']
+  gradientColors: ['from-purple-700 via-purple-600 to-purple-500', 'from-orange-700 via-orange-600 to-orange-500', 'from-blue-700 via-blue-600 to-blue-500'],
+  gradientColorsTransparent: ['from-purple-700/30 via-slate-950/50 to-purple-500/30', 'from-orange-700/30 via-slate-950/50 to-orange-500/30', 'from-blue-700/30 via-slate-950/50 to-blue-500/30']
 };
 
 export default function LandingPage() {
@@ -40,7 +41,7 @@ export default function LandingPage() {
           <CoverParticles colorParticles="#fff" />
         </div>
         <div id="inicio" className="snap-center">
-          <HeroSection gradientColor={colors.gradientColors[gradientIndex]} textColor={colors.textColors[gradientIndex]} />
+          <HeroSection gradientColor={colors.gradientColors[gradientIndex]} textColor={colors.textColors[gradientIndex]} gradientColorTransparent={colors.gradientColorsTransparent[gradientIndex]}/>
         </div>
         <div id="projects" className="snap-center">
           <Projects />
